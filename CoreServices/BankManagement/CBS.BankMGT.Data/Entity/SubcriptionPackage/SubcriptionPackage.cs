@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CBS.BankMGT.Data
+{
+    public class SubcriptionPackage:BaseEntity
+    {
+        public string Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public double MinimumServiceFee { get; set; }
+        public double MaximumServiceFee { get; set; }
+        public bool Status { get; set; }
+        public virtual ICollection<SubcriptionPackageServices> SubcriptionPackageItems{ get; set; }
+    }
+}

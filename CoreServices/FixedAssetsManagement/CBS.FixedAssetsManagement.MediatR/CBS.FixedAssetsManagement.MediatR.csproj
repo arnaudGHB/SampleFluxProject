@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CBS.FixedAssetsManagement.Common\CBS.FixedAssetsManagement.Common.csproj" />
+    <ProjectReference Include="..\CBS.FixedAssetsManagement.Data\CBS.FixedAssetsManagement.Data.csproj" />
+
+    <ProjectReference Include="..\CBS.FixedAssetsManagement.Domain\CBS.FixedAssetsManagement.Domain.csproj" />
+
+    <ProjectReference Include="..\CBS.FixedAssetsManagement.Helper\CBS.FixedAssetsManagement.Helper.csproj" />
+    <ProjectReference Include="..\CBS.FixedAssetsManagement.Repository\CBS.FixedAssetsManagement.Repository.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="FluentValidation" Version="11.10.0" />
+    <PackageReference Include="MediatR" Version="12.4.1" />
+  </ItemGroup>
+
+</Project>

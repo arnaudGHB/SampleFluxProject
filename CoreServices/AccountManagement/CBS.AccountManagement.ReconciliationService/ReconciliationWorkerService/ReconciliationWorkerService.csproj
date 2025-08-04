@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-ReconciliationWorkerService-1443b0ea-a927-4e82-a71a-5eedbef54783</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.4.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\CBS.AccountManagement.Common\CBS.AccountManagement.Common.csproj" />
+    <ProjectReference Include="..\..\CBS.AccountManagement.Data\CBS.AccountManagement.Data.csproj" />
+    <ProjectReference Include="..\..\CBS.AccountManagement.Domain\CBS.AccountManagement.Domain.csproj" />
+    <ProjectReference Include="..\..\CBS.AccountManagement.Helper\CBS.AccountManagement.Helper.csproj" />
+    <ProjectReference Include="..\..\CBS.AccountManagement.MediatR\CBS.AccountManagement.MediatR.csproj" />
+    <ProjectReference Include="..\..\CBS.AccountManagement.Repository\CBS.AccountManagement.Repository.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+</Project>

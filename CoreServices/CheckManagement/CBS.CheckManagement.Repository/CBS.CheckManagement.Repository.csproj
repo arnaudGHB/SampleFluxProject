@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\CBS.CheckManagement.Common\CBS.CheckManagement.Common.csproj" />
+    <ProjectReference Include="..\CBS.CheckManagement.Data\CBS.CheckManagement.Data.csproj" />
+    <ProjectReference Include="..\CBS.CheckManagement.Domain\CBS.CheckManagement.Domain.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>

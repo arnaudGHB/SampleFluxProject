@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.14" />
+    <PackageReference Include="Microsoft.Web.Administration" Version="11.1.0" />
+
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Dto\Documents\" />
+    <Folder Include="Entity\MinoMajorSetup\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CBS.CUSTOMER.HELPER\CBS.CUSTOMER.HELPER.csproj" />
+  </ItemGroup>
+
+</Project>

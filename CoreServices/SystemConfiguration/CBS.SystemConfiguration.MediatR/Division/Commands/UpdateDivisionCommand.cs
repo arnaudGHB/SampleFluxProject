@@ -1,0 +1,21 @@
+﻿using CBS.SystemConfiguration.Data;
+
+using CBS.SystemConfiguration.Helper;
+
+using MediatR;
+
+namespace CBS.SystemConfiguration.MediatR.Commands
+{
+    /// <summary>
+    /// Represents a command to update a UpdateDivisionCommand.
+    /// </summary>
+    public class UpdateDivisionCommand : IRequest<ServiceResponse<DivisionDto>>
+    {
+
+        public string Id { get; set; }
+        public string Name { get; set; }
+        public string RegionId { get; set; }
+  
+
+    }
+}

@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.8.0" />
+    <PackageReference Include="MediatR" Version="12.1.1" />
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.3.14" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CBS.CUSTOMER.COMMON\CBS.CUSTOMER.COMMON.csproj" />
+    <ProjectReference Include="..\CBS.CUSTOMER.DOMAIN\CBS.CUSTOMER.DOMAIN.csproj" />
+  </ItemGroup>
+
+</Project>

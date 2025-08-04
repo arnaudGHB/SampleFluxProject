@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="LinkAccountTypeAccountFeatureRepository\**" />
+    <EmbeddedResource Remove="LinkAccountTypeAccountFeatureRepository\**" />
+    <None Remove="LinkAccountTypeAccountFeatureRepository\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CBS.AccountManagement.Common\CBS.AccountManagement.Common.csproj" />
+    <ProjectReference Include="..\CBS.AccountManagement.Data\CBS.AccountManagement.Data.csproj" />
+    <ProjectReference Include="..\CBS.AccountManagement.Domain\CBS.AccountManagement.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

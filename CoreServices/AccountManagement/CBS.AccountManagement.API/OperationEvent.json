@@ -1,0 +1,437 @@
+[
+  {
+    "Id": "f09c168b-52e0-4605-8aee-6a72904d72b3",
+    "OperationEventName": "AILE",
+    "Description": "Accrual Interest Loan Event"
+  },
+  {
+    "Id": "9b4c2e7e-41c7-4dc3-ab82-335106bf5775",
+    "OperationEventName": "APR",
+    "Description": "Anticipated Partial Repayment"
+  },
+  {
+    "Id": "402d2d4e-b15e-4354-9512-dac0865c0755",
+    "OperationEventName": "APTR",
+    "Description": "Anticipated Partial Total Repayment"
+  },
+  {
+    "Id": "ef81b816-34a4-4fef-a629-8b51d8e9a59c",
+    "OperationEventName": "ATR",
+    "Description": "Anticipated Total Repayment"
+  },
+  {
+    "Id": "c5211796-4b4e-4771-bda1-d4936aa47bc5",
+    "OperationEventName": "BFAE",
+    "Description": "Bounce Fee Accrual Event"
+  },
+  {
+    "Id": "b43a3f79-15ef-4633-8f12-390f2d0cf5f5",
+    "OperationEventName": "BLGL",
+    "Description": "Bad Loan Good Loan"
+  },
+  {
+    "Id": "1dd35114-3c53-4ef3-90a1-5c2d5d4524e5",
+    "OperationEventName": "BLLL",
+    "Description": "Bad Loan Late Loan"
+  },
+  {
+    "Id": "b1e74bed-ff6b-4fe1-a3f4-9b14d052588f",
+    "OperationEventName": "BLRL",
+    "Description": "Bad Loan Rescheduled"
+  },
+  {
+    "Id": "6c6d0340-4864-4e48-bd38-31f3a976310d",
+    "OperationEventName": "BWOE",
+    "Description": "Bounce Write Off Event"
+  },
+  {
+    "Id": "62ce6ba5-c531-45a6-8b5a-0ce59c40a08a",
+    "OperationEventName": "CDAE",
+    "Description": "Close Day Amount Event"
+  },
+  {
+    "Id": "6d46ee1d-d1c5-4fa4-9732-b23afa8d74da",
+    "OperationEventName": "CNDE",
+    "Description": "Close amount Negative Difference Event"
+  },
+  {
+    "Id": "3d201fd6-8f80-4f38-a66d-e9db63260613",
+    "OperationEventName": "CPDE",
+    "Description": "Close amount Positive Difference Event"
+  },
+  {
+    "Id": "31a22d12-0adf-4398-9f9a-cd74b752e2b3",
+    "OperationEventName": "CSUE",
+    "Description": "Client save/update event"
+  },
+  {
+    "Id": "cae7108c-30c5-4e83-be49-34e650fc97f7",
+    "OperationEventName": "FLNE",
+    "Description": "Funding line event"
+  },
+  {
+    "Id": "298fae5e-e245-4aa5-9f50-ad91d65dd80a",
+    "OperationEventName": "GLBL",
+    "Description": "Good Loan Bad Loan"
+  },
+  {
+    "Id": "e4343dfb-7f7b-459b-b2ca-05fc4005a116",
+    "OperationEventName": "GLLL",
+    "Description": "Good Loan Late Loan"
+  },
+  {
+    "Id": "73ec1d02-d026-4338-9c1a-75251d9d2463",
+    "OperationEventName": "GLRL",
+    "Description": "Late Loan Rescheduled"
+  },
+  {
+    "Id": "a3e42e92-225a-48ac-8d7b-7692ffee202b",
+    "OperationEventName": "LCIE",
+    "Description": "Loan credit insurance event"
+  },
+  {
+    "Id": "ce1d36d8-ce3b-49bb-977a-33b311a045b1",
+    "OperationEventName": "LCIP",
+    "Description": "Loan credit insurance premium event"
+  },
+  {
+    "Id": "1cdbd0dc-07f7-4623-932d-24c20d8b58e2",
+    "OperationEventName": "LCIW",
+    "Description": "Loan credit insurance Write-off event"
+  },
+  {
+    "Id": "421256af-c298-4ef0-b3bc-a346ebf661d1",
+    "OperationEventName": "LEE0",
+    "Description": "Entry fees 0"
+  },
+  {
+    "Id": "0a1cad57-0509-4d64-a4b5-687669eed225",
+    "OperationEventName": "LEE1",
+    "Description": "Entry fees 1"
+  },
+  {
+    "Id": "5848b8a8-d781-4201-af01-5b3736e90411",
+    "OperationEventName": "LEE2",
+    "Description": "Entry fees 2"
+  },
+  {
+    "Id": "a37dde94-a1a3-496a-bfdf-6e0ab674369e",
+    "OperationEventName": "LEE3",
+    "Description": "Entry fees 3"
+  },
+  {
+    "Id": "7fdda2bf-24e2-4247-9d24-b7b6f50751ec",
+    "OperationEventName": "LEE4",
+    "Description": "Entry fees 4"
+  },
+  {
+    "Id": "47e3beb9-61e8-4658-9a25-1da4620afa1b",
+    "OperationEventName": "LEE5",
+    "Description": "Entry fees 5"
+  },
+  {
+    "Id": "66ea370b-27f7-4dbf-a460-f2592b03fdab",
+    "OperationEventName": "LEE6",
+    "Description": "Entry fees 6"
+  },
+  {
+    "Id": "4d299e21-5cf5-425a-bd53-610808cab309",
+    "OperationEventName": "LEE7",
+    "Description": "Entry fees 7"
+  },
+  {
+    "Id": "8c5b4d10-a9c7-4bd7-93af-88c97b9e403e",
+    "OperationEventName": "LEE8",
+    "Description": "Entry fees 8"
+  },
+  {
+    "Id": "2fc75c30-b1aa-4276-9857-4d0756b76a59",
+    "OperationEventName": "LEE9",
+    "Description": "Entry fees 9"
+  },
+  {
+    "Id": "25fb5fdb-0fda-4d31-a3fb-2a3f003004b6",
+    "OperationEventName": "LIAE",
+    "Description": "Loan accrued interest event"
+  },
+  {
+    "Id": "300e08cc-87b9-40c3-8afc-11b73ede80cf",
+    "OperationEventName": "LLBL",
+    "Description": "Late Loan Bad Loan"
+  },
+  {
+    "Id": "975763f6-63fe-4eaa-a2b8-a6a556bf9625",
+    "OperationEventName": "LLGL",
+    "Description": "Late Loan Good Loan"
+  },
+  {
+    "Id": "b28a96a3-44ba-44e2-834b-1924c900754a",
+    "OperationEventName": "LLPE",
+    "Description": "Loan provision event"
+  },
+  {
+    "Id": "2c97d536-7d32-4f6d-b947-38b58ba41568",
+    "OperationEventName": "LLRL",
+    "Description": "Late Loan Rescheduled"
+  },
+  {
+    "Id": "966896d1-7633-45ce-beb7-11119e0b1d5f",
+    "OperationEventName": "LOCE",
+    "Description": "Loan Close Event"
+  },
+  {
+    "Id": "359806f2-14d6-478b-bffd-4ede8b9f7b5b",
+    "OperationEventName": "LODE",
+    "Description": "Loan Disbursement Event"
+  },
+  {
+    "Id": "bce67995-6fc2-4d97-80a0-8a7f5225965b",
+    "OperationEventName": "LOVE",
+    "Description": "Loan Validation Event"
+  },
+  {
+    "Id": "605055f5-4db6-49e6-a03f-efa63b8b14f1",
+    "OperationEventName": "LPAE",
+    "Description": "Loan Penalty Accrual Event"
+  },
+  {
+    "Id": "9f694e3f-311b-4cec-99de-adb235648bd2",
+    "OperationEventName": "MSCE",
+    "Description": "Manual Schedule Change Event"
+  },
+  {
+    "Id": "c062f53e-2483-4c96-b862-8a34c9bc821e",
+    "OperationEventName": "NAIE",
+    "Description": "Non Accrual Interest Event"
+  },
+  {
+    "Id": "a115602b-42b9-4407-bde9-5826075a693a",
+    "OperationEventName": "NAPE",
+    "Description": "Non Accrual Penalty Event"
+  },
+  {
+    "Id": "5aeb27ea-ecf3-4e66-8c8a-9181e5ef9735",
+    "OperationEventName": "ODAE",
+    "Description": "Open Day Amount Event"
+  },
+  {
+    "Id": "db12397e-c1fa-43de-95e9-1806495f316c",
+    "OperationEventName": "ONDE",
+    "Description": "Open amount Negative Difference Event"
+  },
+  {
+    "Id": "33f805f4-0626-45cf-a504-c19f2346b145",
+    "OperationEventName": "OPDE",
+    "Description": "Open amount Positive Difference Event"
+  },
+  {
+    "Id": "4d3c9cb0-7e22-4a59-90e4-c3c64cba95a4",
+    "OperationEventName": "RBLE",
+    "Description": "Repayment of Bad Loan Event"
+  },
+  {
+    "Id": "6fa2e875-c209-468b-b50e-2a2154e3785f",
+    "OperationEventName": "RGLE",
+    "Description": "Repayment of Good Loan Event"
+  },
+  {
+    "Id": "de8d23eb-5829-4e5e-b3ab-f09812cafdc4",
+    "OperationEventName": "RILE",
+    "Description": "Recovery Interest Loan Event"
+  },
+  {
+    "Id": "dba207f0-0b24-44ad-ae74-640d6fe49419",
+    "OperationEventName": "ROLE",
+    "Description": "Reschedule Of Loan Event"
+  },
+  {
+    "Id": "969eccad-9f3d-4f2d-a981-956029464702",
+    "OperationEventName": "ROWO",
+    "Description": "Repayment Over Write-Off"
+  },
+  {
+    "Id": "0fce57c1-b475-4523-8463-51d8999d24c9",
+    "OperationEventName": "RPLE",
+    "Description": "Recovery Penalty Loan Event"
+  },
+  {
+    "Id": "52e07f58-c042-490f-aedc-b5cc9f6f2a99",
+    "OperationEventName": "RRLE",
+    "Description": "Repayment for Rescheduled Loan Event"
+  },
+  {
+    "Id": "66a0969d-7939-4b35-8074-edf0984eab25",
+    "OperationEventName": "SBCS",
+    "Description": "Savings Block Compulsory Savings"
+  },
+  {
+    "Id": "a21065de-77f4-4d34-8240-dd3199596dca",
+    "OperationEventName": "SCIT",
+    "Description": "Saving credit inter-branch transfer"
+  },
+  {
+    "Id": "fd73dd2f-69b7-490a-8177-cfb39c1ad79a",
+    "OperationEventName": "SCLE",
+    "Description": "Saving closure"
+  },
+  {
+    "Id": "89b6b9b7-9c9c-4598-927e-7b525b4cc541",
+    "OperationEventName": "SCTE",
+    "Description": "Incoming transfer"
+  },
+  {
+    "Id": "90cee84d-93dd-4b8a-8d1c-d32ef4bd3856",
+    "OperationEventName": "SDIT",
+    "Description": "Saving debit inter-branch transfer"
+  },
+  {
+    "Id": "9ef2b0f3-a2e7-430b-bac5-93131aa9e7c8",
+    "OperationEventName": "SDTE",
+    "Description": "Outgoing transfer"
+  },
+  {
+    "Id": "c9fcc7a9-7b36-4ff0-bb75-5c2c8e7e1ed7",
+    "OperationEventName": "SFCE",
+    "Description": "Saving Fee Contract Event"
+  },
+  {
+    "Id": "32011d19-35aa-4cd9-9463-0196e19b2097",
+    "OperationEventName": "SIAE",
+    "Description": "Accrued interests"
+  },
+  {
+    "Id": "c82be35f-c2f2-4c73-8334-2745caf5a131",
+    "OperationEventName": "SILE",
+    "Description": "Stop Interest Loan Event"
+  },
+  {
+    "Id": "9aebd7b9-bba1-4627-b9d9-c06c20b27b0d",
+    "OperationEventName": "SIPE",
+    "Description": "Posting of accrued interests"
+  },
+  {
+    "Id": "575b721a-4efd-41fb-8e5d-9ed141d41e6b",
+    "OperationEventName": "SMFE",
+    "Description": "Management fee for a period"
+  },
+  {
+    "Id": "c503795a-069e-42f4-a7f3-3bcccc1d589f",
+    "OperationEventName": "SOCE",
+    "Description": "Savings special operation credit"
+  },
+  {
+    "Id": "17195c03-c9e0-443a-82ac-4d996528e5f8",
+    "OperationEventName": "SODE",
+    "Description": "Savings special operation dredit"
+  },
+  {
+    "Id": "bbda917d-400b-4f14-a379-7b614c8289ed",
+    "OperationEventName": "SOFE",
+    "Description": "Overdraft fee"
+  },
+  {
+    "Id": "02f6d42f-4339-4015-97aa-0a584168d818",
+    "OperationEventName": "SPDE",
+    "Description": "Saving pending deposit event"
+  },
+  {
+    "Id": "209972d0-710e-48a8-b92a-d01fb6e398cd",
+    "OperationEventName": "SPDR",
+    "Description": "Saving pending deposit refused event"
+  },
+  {
+    "Id": "bdd6e875-fd84-49e3-9e4d-50841f7d71d6",
+    "OperationEventName": "SPLE",
+    "Description": "Stop Penalty Loan Event"
+  },
+  {
+    "Id": "838dcb5b-f6d1-416a-b273-73366132e870",
+    "OperationEventName": "SRLE",
+    "Description": "Savings repayment for loan event"
+  },
+  {
+    "Id": "764f6ddf-d7c1-4f3f-8f1b-b588fb90ac8a",
+    "OperationEventName": "STCE",
+    "Description": "Saving Tax Contract Event"
+  },
+  {
+    "Id": "9bed81f3-ba80-43cf-969e-11c87c4eb6bc",
+    "OperationEventName": "SUCS",
+    "Description": "Savings Unblock Compulsory Savings"
+  },
+  {
+    "Id": "fb704653-d783-48a6-b2bd-028eee9a244c",
+    "OperationEventName": "SVAE",
+    "Description": "Agio"
+  },
+  {
+    "Id": "9346f7a9-af1f-48ef-a761-7115779e51ae",
+    "OperationEventName": "SVCE",
+    "Description": "Closing of a savings account"
+  },
+  {
+    "Id": "c363e21d-be09-4e4a-8fd2-154d0df999b0",
+    "OperationEventName": "SVDE",
+    "Description": "Deposit"
+  },
+  {
+    "Id": "26e7cd3c-991a-4f95-939e-7c23fd719195",
+    "OperationEventName": "SVIE",
+    "Description": "New saving book"
+  },
+  {
+    "Id": "71a0d091-6336-4729-a2a5-ffab846ef70d",
+    "OperationEventName": "SVLD",
+    "Description": "Savings loan disbursement event"
+  },
+  {
+    "Id": "ed678e06-f28f-46e1-a4f0-15159026646c",
+    "OperationEventName": "SVRE",
+    "Description": "Savings reopen event"
+  },
+  {
+    "Id": "dd657142-17b5-444e-a75c-f01b0fdf791d",
+    "OperationEventName": "SVWE",
+    "Description": "Withdrawal"
+  },
+  {
+    "Id": "2d500b73-36c3-42d5-8611-23f79e436bf7",
+    "OperationEventName": "TEET",
+    "Description": "Tranche event"
+  },
+  {
+    "Id": "22f4b233-45d3-4158-b4d2-1b89c9dee035",
+    "OperationEventName": "UCTE",
+    "Description": "User close teller"
+  },
+  {
+    "Id": "4212d3af-36f8-42dd-8f1b-7c10a038b70c",
+    "OperationEventName": "ULIE",
+    "Description": "User login"
+  },
+  {
+    "Id": "c6d5fa94-e3dc-4304-8077-c1b76aae7e29",
+    "OperationEventName": "ULOE",
+    "Description": "User logout"
+  },
+  {
+    "Id": "8fde65a0-0d0d-4d1b-9258-b784855d7673",
+    "OperationEventName": "UMEE",
+    "Description": "Manual accounting entry event"
+  },
+  {
+    "Id": "ee0b4d60-d26b-499b-afe0-651883c7a243",
+    "OperationEventName": "UOTE",
+    "Description": "User open teller"
+  },
+  {
+    "Id": "a85fdb09-40c3-468c-b717-92b73c10e5fc",
+    "OperationEventName": "USBE",
+    "Description": "Manual standard booking event"
+  },
+  {
+    "Id": "42be4321-89a8-4fa4-a3a1-34e042088784",
+    "OperationEventName": "WROE",
+    "Description": "Write-Off Even"
+  }
+]

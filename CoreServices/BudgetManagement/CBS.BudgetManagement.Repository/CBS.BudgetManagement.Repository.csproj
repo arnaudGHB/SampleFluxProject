@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CBS.BudgetManagement.Common\CBS.BudgetManagement.Common.csproj" />
+    <ProjectReference Include="..\CBS.BudgetManagement.Data\CBS.BudgetManagement.Data.csproj" />
+    <ProjectReference Include="..\CBS.BudgetManagement.Domain\CBS.BudgetManagement.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

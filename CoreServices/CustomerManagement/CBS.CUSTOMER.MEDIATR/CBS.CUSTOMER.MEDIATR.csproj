@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+
+    <Compile Remove="CustomerMediatR\**" />
+    <EmbeddedResource Remove="CustomerMediatR\**" />
+    <None Remove="CustomerMediatR\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="EPPlus" Version="7.1.2" />
+    <PackageReference Include="ExcelDataReader" Version="3.6.0" />
+    <PackageReference Include="FluentValidation" Version="11.8.0" />
+    <PackageReference Include="MediatR" Version="12.1.1" />
+    <PackageReference Include="Microsoft.OpenApi" Version="1.6.10" />
+    <PackageReference Include="NPOI" Version="2.7.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />
+    <PackageReference Include="Tesseract" Version="5.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CBS.CUSTOMER.COMMON\CBS.CUSTOMER.COMMON.csproj" />
+    <ProjectReference Include="..\CBS.CUSTOMER.DATA\CBS.CUSTOMER.DATA.csproj" />
+    <ProjectReference Include="..\CBS.CUSTOMER.DOMAIN\CBS.CUSTOMER.DOMAIN.csproj" />
+    <ProjectReference Include="..\CBS.CUSTOMER.REPOSITORY\CBS.CUSTOMER.REPOSITORY.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="CMoney\SubcriptionDetail\" />
+    <Folder Include="Employee\Validations\" />
+    <Folder Include="Global\Validations\" />
+    <Folder Include="Group\Validations\" />
+    <Folder Include="Organization\Validations\" />
+    <Folder Include="Sms\Validations\" />
+  </ItemGroup>
+
+</Project>

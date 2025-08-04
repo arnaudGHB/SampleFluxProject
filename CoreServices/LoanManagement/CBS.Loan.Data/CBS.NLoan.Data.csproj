@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="Dto\InterestCalculationP\DailyInterestCalculation.cs~RF7415ec1.TMP" />
+    <None Include="Dto\InterestCalculationP\hilh3off.tz5~" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Web.Administration" Version="11.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CBS.Loan.Helper\CBS.NLoan.Helper.csproj" />
+  </ItemGroup>
+
+</Project>

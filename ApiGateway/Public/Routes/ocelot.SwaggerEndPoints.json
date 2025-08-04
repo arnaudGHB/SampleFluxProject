@@ -1,0 +1,37 @@
+﻿{
+  "SwaggerEndPoints": [
+    {
+      "Key": "Clients",
+      //"TransformByOcelotConfig": false,
+      "Config": [
+        {
+          "Name": "Client Management",
+          "Version": "1.0",
+          "Url": "http://localhost:44308/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "Accounts",
+      //"TransformByOcelotConfig": true,
+      "Config": [
+        {
+          "Name": "Account Management",
+          "Version": "1.0",
+          "Url": "http://localhost:5205/catalog/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "Loan",
+      //"TransformByOcelotConfig": true,
+      "Config": [
+        {
+          "Name": "Loan Management",
+          "Version": "1.0",
+          "Url": "http://localhost:5205/catalog/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ]
+}

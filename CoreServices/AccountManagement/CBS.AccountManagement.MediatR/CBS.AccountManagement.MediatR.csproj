@@ -1,0 +1,79 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="AccountCategory - Copy\**" />
+    <Compile Remove="AccountFeature\**" />
+    <Compile Remove="AuditTrail\**" />
+    <Compile Remove="BankTransaction\**" />
+    <Compile Remove="Budget - Copy %282%29\**" />
+    <Compile Remove="Budget - Copy\**" />
+    <Compile Remove="BudgetCategory - Copy\**" />
+    <Compile Remove="BudgetPeriod\**" />
+    <Compile Remove="LinkAccountTypeAccountFeature\**" />
+    <Compile Remove="OperationEvent - Copy\**" />
+    <Compile Remove="UploadFileHandler\**" />
+    <EmbeddedResource Remove="AccountCategory - Copy\**" />
+    <EmbeddedResource Remove="AccountFeature\**" />
+    <EmbeddedResource Remove="AuditTrail\**" />
+    <EmbeddedResource Remove="BankTransaction\**" />
+    <EmbeddedResource Remove="Budget - Copy %282%29\**" />
+    <EmbeddedResource Remove="Budget - Copy\**" />
+    <EmbeddedResource Remove="BudgetCategory - Copy\**" />
+    <EmbeddedResource Remove="BudgetPeriod\**" />
+    <EmbeddedResource Remove="LinkAccountTypeAccountFeature\**" />
+    <EmbeddedResource Remove="OperationEvent - Copy\**" />
+    <EmbeddedResource Remove="UploadFileHandler\**" />
+    <None Remove="AccountCategory - Copy\**" />
+    <None Remove="AccountFeature\**" />
+    <None Remove="AuditTrail\**" />
+    <None Remove="BankTransaction\**" />
+    <None Remove="Budget - Copy %282%29\**" />
+    <None Remove="Budget - Copy\**" />
+    <None Remove="BudgetCategory - Copy\**" />
+    <None Remove="BudgetPeriod\**" />
+    <None Remove="LinkAccountTypeAccountFeature\**" />
+    <None Remove="OperationEvent - Copy\**" />
+    <None Remove="UploadFileHandler\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="AccountingEntry\BalanceSheetGenerator.cs" />
+    <Compile Remove="AccountingEntry\FinancialStatementGenerator.cs" />
+    <Compile Remove="AccountingEntry\Handlers\CashInitializationCommandHandler - Copy.cs" />
+    <Compile Remove="AccountingEntry\Handlers\Get4ColumnTrialBalanceQuery.cs" />
+    <Compile Remove="AccountingEntry\Handlers\Get6ColumnTrialBalanceQueryHandler.cs" />
+    <Compile Remove="AccountingEntry\Handlers\GetBalanceSheetQueryHandler.cs" />
+    <Compile Remove="AccountingEntry\Handlers\GetFinancialStatementQuery.cs" />
+    <Compile Remove="AccountingEntry\TrialBalanceGenerator.cs" />
+    <Compile Remove="AccountingPostingTracking\Handlers\UpdateAccountingTransactionTrackerCommandHandler - Copy.cs" />
+    <Compile Remove="AccountType\Queries\GetAllAccountCategoryQuery.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="ClosedXML" Version="0.104.2" />
+    <PackageReference Include="ExcelDataReader.DataSet" Version="3.6.0" />
+    <PackageReference Include="FluentValidation" Version="11.8.0" />
+    <PackageReference Include="MediatR" Version="12.1.1" />
+    <PackageReference Include="Polly" Version="8.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CBS.AccountManagement.Data\CBS.AccountManagement.Data.csproj" />
+    <ProjectReference Include="..\CBS.AccountManagement.Domain\CBS.AccountManagement.Domain.csproj" />
+    <ProjectReference Include="..\CBS.AccountManagement.Helper\CBS.AccountManagement.Helper.csproj" />
+    <ProjectReference Include="..\CBS.AccountManagement.Repository\CBS.AccountManagement.Repository.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="FinancialReportConfiguration\Queries\DocumentReferenceCode\" />
+    <Folder Include="TransactionTracker\Queries\" />
+  </ItemGroup>
+
+</Project>

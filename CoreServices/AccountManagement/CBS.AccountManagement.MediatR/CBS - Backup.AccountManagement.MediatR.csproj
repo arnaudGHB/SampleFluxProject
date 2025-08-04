@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="FluentValidation" Version="11.8.0" />
+    <PackageReference Include="MediatR" Version="12.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CBS.AccountManagement.Common\CBS.AccountManagement.Common.csproj" />
+    <ProjectReference Include="..\CBS.AccountManagement.Data\CBS.AccountManagement.Data.csproj" />
+    <ProjectReference Include="..\CBS.AccountManagement.Domain\CBS.AccountManagement.Domain.csproj" />
+    <ProjectReference Include="..\CBS.AccountManagement.Helper\CBS.AccountManagement.Helper.csproj" />
+    <ProjectReference Include="..\CBS.AccountManagement.Repository\CBS.AccountManagement.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

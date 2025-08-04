@@ -1,0 +1,29 @@
+﻿using Microsoft.EntityFrameworkCore.Migrations;
+
+#nullable disable
+
+namespace CBS.NLoan.Domain.Migrations
+{
+    /// <inheritdoc />
+    public partial class L32 : Migration
+    {
+        /// <inheritdoc />
+        protected override void Up(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.AddColumn<decimal>(
+                name: "DueAmount",
+                table: "DailyInterestCalculations",
+                type: "decimal(18,2)",
+                nullable: false,
+                defaultValue: 0m);
+        }
+
+        /// <inheritdoc />
+        protected override void Down(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.DropColumn(
+                name: "DueAmount",
+                table: "DailyInterestCalculations");
+        }
+    }
+}

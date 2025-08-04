@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.14" />
+
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CBS.CUSTOMER.DATA\CBS.CUSTOMER.DATA.csproj" />
+    <ProjectReference Include="..\CBS.CUSTOMER.DOMAIN\CBS.CUSTOMER.DOMAIN.csproj" />
+  </ItemGroup>
+
+</Project>

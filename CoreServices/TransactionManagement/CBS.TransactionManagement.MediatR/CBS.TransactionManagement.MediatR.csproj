@@ -1,0 +1,69 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="BankP\**" />
+    <Compile Remove="CashReplenishmentSubTellerP - Copy\**" />
+    <Compile Remove="FeeP\**" />
+    <Compile Remove="MemberAccountConfiguration\MemberAccountActivationPolicy\**" />
+    <Compile Remove="SalaryManagement\SalaryFiles\**" />
+    <EmbeddedResource Remove="BankP\**" />
+    <EmbeddedResource Remove="CashReplenishmentSubTellerP - Copy\**" />
+    <EmbeddedResource Remove="FeeP\**" />
+    <EmbeddedResource Remove="MemberAccountConfiguration\MemberAccountActivationPolicy\**" />
+    <EmbeddedResource Remove="SalaryManagement\SalaryFiles\**" />
+    <None Remove="BankP\**" />
+    <None Remove="CashReplenishmentSubTellerP - Copy\**" />
+    <None Remove="FeeP\**" />
+    <None Remove="MemberAccountConfiguration\MemberAccountActivationPolicy\**" />
+    <None Remove="SalaryManagement\SalaryFiles\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Customer\Handler\GetCustomerByAccountNumberCommandHandler.cs" />
+    <Compile Remove="TellerP\Handlers\GetAllSubTellerProvioningHistoryBetweenDatesQueryHandler.cs" />
+    <Compile Remove="TellerP\Handlers\GetAllSubTellerProvioningHistoryQueryHandler.cs" />
+    <Compile Remove="TellerP\Handlers\GetSubTellerProvioningHistoryByPrimaryTellerUserIDQueryHandler.cs" />
+    <Compile Remove="TellerP\Handlers\GetSubTellerProvioningHistoryByUserIDQueryHandler.cs" />
+    <Compile Remove="TellerP\Handlers\GetSubTellerProvioningHistoryQueryHandler.cs" />
+    <Compile Remove="Transaction\Commands\AddBulkOperationWithdrawalCommand.cs" />
+    <Compile Remove="Transaction\Handlers\AddBulkOperationWithdrawalCommandHandler.cs" />
+    <Compile Remove="Transaction\Handlers\DepositTransactionCommandHandler.cs" />
+    <Compile Remove="Transaction\Handlers\InitialDepositCommandHandler.cs" />
+    <Compile Remove="Transaction\Handlers\ThirdPartyDepositTransactionCommandHandler.cs" />
+    <Compile Remove="Transaction\Handlers\TransferTransactionCommandHandler.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="FluentValidation" Version="11.8.0" />
+    <PackageReference Include="MediatR" Version="12.1.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="5.3.5" />
+  </ItemGroup>
+
+
+
+  <ItemGroup>
+    <Folder Include="NewFolder\" />
+    <Folder Include="Operations\NoneCash\Commands\" />
+    <Folder Include="Operations\NoneCash\Handlers\" />
+    <Folder Include="Operations\NoneCash\Services\" />
+    <Folder Include="VaultAuthorisedPersonP\" />
+    <Folder Include="VaultOperationP\" />
+  </ItemGroup>
+
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\CBS.TransactionManagement.Data\CBS.TransactionManagement.Data.csproj" />
+    <ProjectReference Include="..\CBS.TransactionManagement.Domain\CBS.TransactionManagement.Domain.csproj" />
+    <ProjectReference Include="..\CBS.TransactionManagement.Repository\CBS.TransactionManagement.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,114 @@
+﻿using CBS.BankMGT.Common.DBConnection;
+using MongoDB.Driver;
+using System.Linq.Expressions;
+
+namespace CBS.BankMGT.Common.Repository.Generic
+{
+
+
+    public class MongoGenericRepository<TEntity> : IMongoGenericRepository<TEntity> where TEntity : class
+    {
+        private readonly IMongoCollection<TEntity> _collection;
+
+        public MongoGenericRepository(IMongoDbConnection mongoDbConnection)
+        {
+            _collection = mongoDbConnection.Database.GetCollection<TEntity>(typeof(TEntity).Name + "s");
+        }
+        // Expose the collection safely for advanced operations
+        public IMongoCollection<TEntity> Collection => _collection;
+        public async Task<IEnumerable<TEntity>> GetAllAsync()
+        {
+            try
+            {
+                return await _collection.Find(FilterDefinition<TEntity>.Empty).ToListAsync();
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+        }
+
+
+        public async Task<TEntity> GetByIdAsync(object id)
+        {
+            var filter = Builders<TEntity>.Filter.Eq("_id", id);
+            return await _collection.Find(filter).FirstOrDefaultAsync();
+        }
+
+        public async Task InsertAsync(TEntity entity)
+        {
+            await _collection.InsertOneAsync(entity);
+        }
+
+        public async Task InsertManyAsync(IEnumerable<TEntity> entities)
+        {
+            await _collection.InsertManyAsync(entities);
+        }
+
+        public async Task UpdateAsync(object id, TEntity entity)
+        {
+            var filter = Builders<TEntity>.Filter.Eq("_id", id);
+            await _collection.ReplaceOneAsync(filter, entity);
+        }
+
+        public async Task UpdateManyAsync(IEnumerable<TEntity> entities)
+        {
+            foreach (var entity in entities)
+            {
+                var id = entity.GetType().GetProperty("Id")?.GetValue(entity, null); // Assuming 'Id' property exists
+                var filter = Builders<TEntity>.Filter.Eq("_id", id);
+                await _collection.ReplaceOneAsync(filter, entity);
+            }
+        }
+
+        public async Task DeleteAsync(object id)
+        {
+            var filter = Builders<TEntity>.Filter.Eq("_id", id);
+            await _collection.DeleteOneAsync(filter);
+        }
+        public async Task<List<TEntity>> GetPagedAsync(int skip, int take)
+        {
+            return await _collection.Find(FilterDefinition<TEntity>.Empty)
+                                    .Skip(skip)
+                                    .Limit(take)
+                                    .ToListAsync();
+        }
+        public async Task<long> CountAsync(FilterDefinition<TEntity> filter = null)
+        {
+            filter ??= FilterDefinition<TEntity>.Empty;
+            return await _collection.CountDocumentsAsync(filter);
+        }
+        public async Task<long> CountAsync()
+        {
+            return await _collection.CountDocumentsAsync(FilterDefinition<TEntity>.Empty);
+        }
+        public async Task<List<TEntity>> GetPagedFilteredAndSortedAsync(FilterDefinition<TEntity> filter, SortDefinition<TEntity> sort, int skip, int take)
+        {
+            // Ensure valid sorting or use a default column
+            if (sort == null)
+            {
+                sort = Builders<TEntity>.Sort.Ascending("Id");  // Replace "Id" with a valid default column
+            }
+
+            return await _collection.Find(filter)
+                                    .Sort(sort)
+                                    .Skip(skip)
+                                    .Limit(take)
+                                    .ToListAsync();
+        }
+
+
+
+        public async Task DeleteManyAsync(IEnumerable<object> ids)
+        {
+            var filter = Builders<TEntity>.Filter.In("_id", ids);
+            await _collection.DeleteManyAsync(filter);
+        }
+
+        public IQueryable<TEntity> FindBy(Expression<Func<TEntity, bool>> predicate)
+        {
+            return _collection.AsQueryable().Where(predicate);
+        }
+    }
+}

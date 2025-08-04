@@ -1,0 +1,56 @@
+[
+  {
+    "Id": "39102027-b780-4b5e-b97d-ac26243fa2f7",
+    "Name": "CLASS 1",
+    "Description": "Permanent capital accounts, which include equity, reserves, retained earnings, and subordinated debt",
+    "AccountCategoryId": "37cc8b92-28ec-4f9f-9f2e-b5c875b28717"
+  },
+  {
+    "Id": "2d8f2046-4c81-465d-a7db-2e53357a08dd",
+    "Name": "CLASS 2",
+    "Description": "Fixed assets accounts, which include intangible assets, tangible assets, deposits and guarantees, and equity investments.",
+    "AccountCategoryId": "37cc8b92-28ec-4f9f-9f2e-b5c875b28717"
+  },
+  {
+    "Id": "26df7309-26d3-4664-b568-d3c431cc1353",
+    "Name": "CLASS 3",
+    "Description": " Operations with customers accounts, which include loans, receivables, and provisions for loan losses.",
+    "AccountCategoryId": "37cc8b92-28ec-4f9f-9f2e-b5c875b28717"
+  },
+  {
+    "Id": "39880a6c-dda4-4258-a2fc-51ab8b64b6c6",
+    "Name": "CLASS 4",
+    "Description": "Third parties and adjustment accounts, which include suppliers, personnel, state, shareholders, miscellaneous debtors, and prepaid expenses.",
+    "AccountCategoryId": "37cc8b92-28ec-4f9f-9f2e-b5c875b28717"
+  },
+  {
+    "Id": "ae91ba89-e0af-4927-ae31-57d70fe4eb9b",
+    "Name": "CLASS 5",
+    "Description": "Cash and interbank operations accounts, which include cash equivalents, money market, deposits with other microfinance institutions, banks, and financial institutions, and cash.",
+    "AccountCategoryId": "37cc8b92-28ec-4f9f-9f2e-b5c875b28717"
+  },
+  {
+    "Id": "059ce11e-acef-451e-ae58-0d89fe0d61c7",
+    "Name": "CLASS 6",
+    "Description": "Expense accounts, which include interest expenses, operating expenses, depreciation and amortization, provisions, exceptional expenses, and taxes.",
+    "AccountCategoryId": "b9ddfa0c-9d5f-4530-9a07-bfd586f035bc"
+  },
+  {
+    "Id": "da2b2112-4dae-478d-a843-538ebe53a984",
+    "Name": "CLASS 7",
+    "Description": " Revenue accounts, which include interest income, operating income, exceptional income, and gains on disposal of assets.",
+    "AccountCategoryId": "b9ddfa0c-9d5f-4530-9a07-bfd586f035bc"
+  },
+  {
+    "Id": "e0e92266-6102-4381-9542-ca0ba74ddaba",
+    "Name": "CLASS 8",
+    "Description": " Off-balance sheet accounts, which include commitments, guarantees, and contingencies.",
+    "AccountCategoryId": "Extra-Ordinary"
+  },
+  {
+    "Id": "bfsqe9de66-6102-4381-9542-ca0ba74ccbad",
+    "Name": "CLASS 9",
+    "Description": " Off-balance sheet accounts, which include commitments, guarantees, and contingencies.",
+    "AccountCategoryId": "Off-Balance-Sheet"
+  }
+]

@@ -1,0 +1,214 @@
+﻿using CBS.AccountManagement.Data;
+using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
+using System.Data.Common;
+using System.Data;
+using System.Linq.Expressions;
+using System.Security.Principal;
+
+namespace CBS.AccountManagement.Common
+{
+    public class GenericRepository<TC, TContext> : IGenericRepository<TC>
+        where TC : class
+        where TContext : DbContext
+    {
+        protected readonly TContext Context;
+        internal readonly DbSet<TC> DbSet;
+        protected IUnitOfWork<TContext> _uow;
+
+        protected GenericRepository(IUnitOfWork<TContext> uow
+            )
+        {
+            Context = uow.Context;
+            this._uow = uow;
+            DbSet = Context.Set<TC>();
+        }
+
+   
+
+    public IQueryable<TC> All => Context.Set<TC>();
+
+        public void Add(TC entity)
+        {
+            Context.Add(entity);
+        }
+        public IQueryable<TC> FindBy(Expression<Func<TC, bool>> predicate)
+        {
+
+            IQueryable<TC> queryable = DbSet.AsNoTracking();
+            return queryable.Where(predicate);
+        }
+        public IQueryable<TC> AllIncluding(params Expression<Func<TC, object>>[] includeProperties)
+        {
+            return GetAllIncluding(includeProperties);
+        }
+
+        public IQueryable<TC> FindByInclude(Expression<Func<TC, bool>> predicate, params Expression<Func<TC, object>>[] includeProperties)
+        {
+            var query = GetAllIncluding(includeProperties);
+            return query.Where(predicate);
+        }
+
+        //public IQueryable<TC> FindBy(Expression<Func<TC, bool>> predicate)
+        //{
+          
+        //    IQueryable<TC> queryable = DbSet.AsNoTracking();
+        //    return queryable.Where(predicate);
+        //}
+
+        private IQueryable<TC> GetAllIncluding(params Expression<Func<TC, object>>[] includeProperties)
+        {
+            IQueryable<TC> queryable = DbSet.AsNoTracking();
+
+            return includeProperties.Aggregate
+              (queryable, (current, includeProperty) => current.Include(includeProperty));
+        }
+        public void Attach(TC entity)
+        {
+            // Check if entity exists with same PK
+             // Attach to change tracker
+                Context.Set<TC>().Attach(entity);
+          
+        }
+
+        private object GetIdValue(TC entity)
+        {
+            var entityType = typeof(TC);
+            var keyProperties = entityType.GetProperties()
+                .Where(p => p.GetCustomAttributes(typeof(KeyAttribute), false).Length > 0);
+
+            if (keyProperties.Count() == 0)
+                throw new Exception("No key");
+
+            if (keyProperties.Count() > 1)
+                throw new Exception("Composite keys not supported");
+
+            var keyProperty = keyProperties.First();
+            return keyProperty.GetValue(entity);
+        }
+        public TC Find(string id)
+        {
+            return Context.Set<TC>().Find(id);
+        }
+
+        public async Task<TC> FindAsync(string id)
+        {
+            return await Context.Set<TC>().FindAsync(id);
+        }
+
+        public virtual void Update(TC entity)
+        {
+            Context.Update(entity);
+
+        }
+        public virtual void UpdateInCasecade(TC entity)
+        {
+            try
+            {
+                var IDS = GetIdValue(entity);
+                var conflictingAccount = Context.Set<TC>().Find(GetIdValue(entity));
+                if (conflictingAccount != null)
+                {
+                    // Merge changes from the new instance into the existing tracked instance
+                    Context.Entry(conflictingAccount).CurrentValues.SetValues(entity);
+                }
+                else
+                {
+                    Context.Set<TC>().Attach(entity);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw(ex);
+            }
+
+        }
+        public async Task SaveChangesAsync()
+        {
+            //using (var transaction = Context.Database.BeginTransaction())
+            //{
+                try
+                {
+                    await Context.SaveChangesAsync();
+                    //transaction.Commit();
+                }
+                catch (Exception ex)
+                {
+                    //transaction.Rollback();
+                    // Log or handle the exception as needed
+                    throw;
+                }
+            //}
+        }
+        public virtual void UpdateRange(List<TC> entities)
+        {
+            Context.UpdateRange(entities);
+        }
+
+        public virtual void UpdateRangeInCaseCade(List<TC> entities)
+        {
+            foreach (var item in entities)
+            {
+                UpdateInCasecade(item);
+            }
+            
+        }
+
+        public async Task RemoveRangeAsync(IEnumerable<TC> lstEntities)
+        {
+            Context.Set<TC>().RemoveRange(lstEntities);
+            await Context.SaveChangesAsync();
+        }
+        public void RemoveRange(IEnumerable<TC> lstEntities)
+        {
+            Context.Set<TC>().RemoveRange(lstEntities);
+        }
+
+        public void AddRange(IEnumerable<TC> lstEntities)
+        {
+            try
+            {
+                Context.Set<TC>().AddRange(lstEntities);
+            }
+            catch (Exception ex)
+            {
+
+                throw(ex);
+            }
+        }
+
+        public void InsertUpdateGraph(TC entity)
+        {
+            Context.Set<TC>().Add(entity);
+            //Context.ApplyStateChanges(user);
+        }
+
+        public virtual void Delete(string id)
+        {
+            var entity = Context.Set<TC>().Find(id) as BaseEntity;
+            if (entity != null)
+            {
+                entity.IsDeleted = true;
+                Context.Update(entity);
+            }
+        }
+
+        public virtual void Delete(TC entityData)
+        {
+            var entity = entityData as BaseEntity;
+            entity.IsDeleted = true;
+            Context.Update(entity);
+        }
+
+        public virtual void Remove(TC entity)
+        {
+            Context.Remove(entity);
+        }
+
+        public void Dispose()
+        {
+            Context.Dispose();
+        }
+    }
+}

@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CBS.SystemConfiguration.Common\CBS.SystemConfiguration.Common.csproj" />
+    <ProjectReference Include="..\CBS.SystemConfiguration.Data\CBS.SystemConfiguration.Data.csproj" />
+    <ProjectReference Include="..\CBS.SystemConfiguration.Domain\CBS.SystemConfiguration.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

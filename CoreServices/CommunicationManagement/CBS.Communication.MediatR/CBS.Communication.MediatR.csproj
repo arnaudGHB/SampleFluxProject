@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Sms\Queries\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="FluentValidation" Version="11.8.0" />
+    <PackageReference Include="Google.Apis.Auth" Version="1.69.0" />
+    <PackageReference Include="MediatR" Version="12.1.1" />
+	  <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\APICallerHelper\CBS.APICaller.Helper\CBS.APICaller.Helper.csproj" />
+    <ProjectReference Include="..\..\..\Common\CustomerLoggerHelper\CBS.CustomLog.Logger\CBS.CustomLog.Logger.csproj" />
+    <ProjectReference Include="..\CBS.Communication.Common\CBS.Communication.Common.csproj" />
+    <ProjectReference Include="..\CBS.Communication.Data\CBS.Communication.Data.csproj" />
+    <ProjectReference Include="..\CBS.Communication.Domain\CBS.Communication.Domain.csproj" />
+    <ProjectReference Include="..\CBS.Communication.Helper\CBS.Communication.Helper.csproj" />
+    <ProjectReference Include="..\CBS.Communication.Repository\CBS.Communication.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

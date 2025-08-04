@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access">
+  <Class Name="CBS.BankMGT.Data.Bank">
+    <Position X="2" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACAAAAACAgAAAAAAAAAAQABQAAAAACEIEAAAAAIAA=</HashCode>
+      <FileName>Entity\Bank\Bank.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBS.BankMGT.Data.Branch">
+    <Position X="8" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQCAAAAACAAAAAAAAIAAAQAAAAAAAACEKEAAAAAAAA=</HashCode>
+      <FileName>Entity\Branches\Branch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBS.BankMGT.Data.Country">
+    <Position X="4" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAQAAAAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entity\Country\Country.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBS.BankMGT.Data.Division">
+    <Position X="11.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAGAAAAgAAAAAAAAAAAAAQAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Entity\Division\Division.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBS.BankMGT.Data.Organization">
+    <Position X="11" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAAAAAAAQAAAISAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entity\Organization\Organization.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBS.BankMGT.Data.Region">
+    <Position X="9.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAABIQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entity\Region\Region.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBS.BankMGT.Data.Teller">
+    <Position X="6" Y="1" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAACAAEAAAAgAQAAAIEBAAQAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entity\Teller\Teller.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBS.BankMGT.Data.Town">
+    <Position X="4.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAABAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Entity\Town\Town.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CBS.BankMGT.Data.BaseEntity" Collapsed="true">
+    <Position X="14" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAACAAAAAAAAAAAAAAAAAAAQgAAAAIACgAAAQDAAAE=</HashCode>
+      <FileName>BaseEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

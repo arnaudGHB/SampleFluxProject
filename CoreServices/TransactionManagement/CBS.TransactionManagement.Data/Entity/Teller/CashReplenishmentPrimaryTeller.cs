@@ -1,0 +1,30 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CBS.TransactionManagement.Data
+{
+    public class CashReplenishmentPrimaryTeller : BaseEntity
+    {
+        public string Id { get; set; }
+        public string TellerId { get; set; }
+        public bool Status { get; set; }
+        public string BranchId { get; set; }
+        public decimal RequestedAmount { get; set; }
+        public decimal ConfirmedAmount { get; set; }
+        public string RequesterUserId { get; set; }
+        public string? ApprovedBy { get; set; }
+        public string? ApprovedByUserId { get; set; }
+        public DateTime ApprovedDate { get; set; }
+        public DateTime InitializeDate { get; set; }
+        public string? ApprovedComment { get; set; }
+        public string? Requetcomment { get; set; }
+        public string? ApprovedStatus { get; set; }//Pending,Approved, Rejected
+        public string TransactionReference { get; set; }
+        public string RequesterName { get; set; }
+        public virtual Teller Teller { get; set; }
+
+    }
+}

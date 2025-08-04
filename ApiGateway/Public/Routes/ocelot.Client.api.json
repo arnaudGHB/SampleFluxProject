@@ -1,0 +1,232 @@
+﻿{
+  "Routes": [
+    {
+      //Add client
+      "UpstreamPathTemplate": "/Gateway/TechCare/TechCare/api/v1/AddClient",
+      "DownstreamPathTemplate": "/api/v1/AddClient",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44308
+        }
+      ],
+
+      "UpstreamHttpMethod": [ "POST" ],
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      //Ussd client subscription
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/AddUssdClient/ussd",
+      "DownstreamPathTemplate": "/api/v1/AddUssdClient/ussd",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44308
+        }
+      ],
+
+      "UpstreamHttpMethod": [ "POST" ],
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      /// <summary>
+      /// Update an existing client by using msisdn.
+      /// </summary>
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/UpdateClient/{msisdn}",
+      "DownstreamPathTemplate": "/api/v1/UpdateClient/{msisdn}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44308
+        }
+      ],
+
+      "UpstreamHttpMethod": [ "PUT" ],
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      /// <summary>
+      /// Update or Upload an existing client by profile picture by msisdn.
+      /// </summary>
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/UploadClientPhoto/{msisdn}",
+      "DownstreamPathTemplate": "/api/v1/UploadClientPhoto/{msisdn}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44308
+        }
+      ],
+
+      "UpstreamHttpMethod": [ "PUT" ],
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      /// <summary>
+      /// Upload Or Updates an existing client's National ID card by msisdn.
+      /// </summary>
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/UploadNationalIDCard/{msisdn}",
+      "DownstreamPathTemplate": "/api/v1/UploadNationalIDCard/{msisdn}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44308
+        }
+      ],
+
+      "UpstreamHttpMethod": [ "PUT" ],
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      /// <summary>
+      /// Confirm an existing client's photo by using their mobile number (msisdn).
+      /// </summary>
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/ConfirmClientPhoto/{msisdn}",
+      "DownstreamPathTemplate": "/api/v1/ConfirmClientPhoto/{msisdn}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44308
+        }
+      ],
+
+      "UpstreamHttpMethod": [ "PUT" ],
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      /// <summary>
+      /// API for Confirming an existing client's national ID card image status by MSISDN.
+      /// </summary>
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/ConfirmClientNationalIDCard/{msisdn}",
+      "DownstreamPathTemplate": "/api/v1/ConfirmClientNationalIDCard/{msisdn}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44308
+        }
+      ],
+
+      "UpstreamHttpMethod": [ "PUT" ],
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      /// <summary>
+      /// Change the client's language.
+      /// </summary>
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/ChangeLanguage/{msisdn}",
+      "DownstreamPathTemplate": "/api/v1/ChangeLanguage/{msisdn}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44308
+        }
+      ],
+
+      "UpstreamHttpMethod": [ "PUT" ],
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      /// <summary>
+      /// Get a client by msisdn.
+      /// </summary>
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/GetClient/{msisdn}",
+      "DownstreamPathTemplate": "/api/v1/GetClient/{msisdn}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44308
+        }
+      ],
+
+      "UpstreamHttpMethod": [ "GET" ],
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      //Get all clients
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/GetClients/All",
+      "DownstreamPathTemplate": "/api/v1/GetClients/All",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44308
+        }
+      ],
+
+      "UpstreamHttpMethod": [ "GET" ],
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      /// <summary>
+      /// Get clients with optional paging.
+      /// </summary>
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/GetClients/ByPaging",
+      "DownstreamPathTemplate": "/api/v1/GetClients/ByPaging",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44308
+        }
+      ],
+
+      "UpstreamHttpMethod": [ "GET" ],
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      /// <summary>
+      /// Deletes a client by msisdn.
+      /// </summary>
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/DeleteClient/{msisdn}}",
+      "DownstreamPathTemplate": "/api/v1/DeleteClient/{msisdn}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44308
+        }
+      ],
+
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+
+      /// <summary>
+      /// Retrieves client context by Msisdn.
+      /// </summary>
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/GetClientContext/ussd/{msisdn}",
+      "DownstreamPathTemplate": "/api/v1/GetClientContext/ussd/{msisdn}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44308
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET" ],
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    }
+  ]
+}

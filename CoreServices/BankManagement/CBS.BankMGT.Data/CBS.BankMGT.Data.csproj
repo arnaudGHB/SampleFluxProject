@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Entity\Collateral\**" />
+    <Compile Remove="Entity\ContractCode\**" />
+    <Compile Remove="Entity\EntryFee\**" />
+    <Compile Remove="Entity\ExchangeRate\**" />
+    <Compile Remove="Entity\LoanPurpose\**" />
+    <Compile Remove="Entity\PaymentMethods\**" />
+    <Compile Remove="Entity\SetApplicationDate\**" />
+    <EmbeddedResource Remove="Entity\Collateral\**" />
+    <EmbeddedResource Remove="Entity\ContractCode\**" />
+    <EmbeddedResource Remove="Entity\EntryFee\**" />
+    <EmbeddedResource Remove="Entity\ExchangeRate\**" />
+    <EmbeddedResource Remove="Entity\LoanPurpose\**" />
+    <EmbeddedResource Remove="Entity\PaymentMethods\**" />
+    <EmbeddedResource Remove="Entity\SetApplicationDate\**" />
+    <None Remove="Entity\Collateral\**" />
+    <None Remove="Entity\ContractCode\**" />
+    <None Remove="Entity\EntryFee\**" />
+    <None Remove="Entity\ExchangeRate\**" />
+    <None Remove="Entity\LoanPurpose\**" />
+    <None Remove="Entity\PaymentMethods\**" />
+    <None Remove="Entity\SetApplicationDate\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Entity\LoanPurpose\" />
+    <Folder Include="Entity\ExchangeRate\" />
+    <Folder Include="Entity\ContractCode\" />
+    <Folder Include="Entity\Collateral\" />
+    <Folder Include="Entity\EntryFee\" />
+    <Folder Include="Entity\NewFolder1\" />
+    <Folder Include="Entity\NewFolder\" />
+    <Folder Include="Entity\SetApplicationDate\" />
+    <Folder Include="Entity\PaymentMethods\" />
+    <PackageReference Include="Microsoft.Web.Administration" Version="11.1.0" />
+    <PackageReference Include="MongoDB.Driver" Version="3.0.0" />
+  </ItemGroup>
+
+</Project>

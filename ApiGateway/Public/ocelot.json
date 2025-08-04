@@ -1,0 +1,762 @@
+//{
+//  "Routes": [
+//    {
+//      "UpstreamPathTemplate": "/Api/Gateway/Fluxcam/Loan/{url}",
+//      "DownstreamPathTemplate": "/{url}",
+//      "DownstreamScheme": "http",
+//      "DownstreamHostAndPorts": [
+//        {
+//          "Host": "localhost",
+//          "Port": 7041
+//        }
+//      ],
+//      "UpstreamHttpMethod": [ "GET", "POST", "DELETE", "PUT" ],
+//      "ReRoutesCaseSensitive": false,
+//      "LoadBalancerOptions": {
+//        "Type": "LeastConnection"
+//      },
+//      "AuthenticationOptions": {
+//        "AuthenticationProviderKey": "Bearer",
+//        "AllowedScopes": []
+//      },
+//      "RateLimitOptions": {
+//        "ClientWhitelist": [],
+//        "EnableRateLimiting": true,
+//        "Period": "1m",
+//        "PeriodTimespan": 1,
+//        "Limit": 100,
+//        "QuotaExceededMessage": "Rate limit exceeded. Try again later.",
+//        "HttpStatusCode": 429
+//      }
+//    },
+//    {
+//      "UpstreamPathTemplate": "/Api/Gateway/Fluxcam/Transaction/{url}",
+//      "DownstreamPathTemplate": "/{url}",
+//      "DownstreamScheme": "http",
+//      "DownstreamHostAndPorts": [
+//        {
+//          "Host": "localhost",
+//          "Port": 7113
+//        }
+//      ],
+//      "UpstreamHttpMethod": [ "GET", "POST", "DELETE", "PUT" ],
+//      "ReRoutesCaseSensitive": false,
+//      "LoadBalancerOptions": {
+//        "Type": "LeastConnection"
+//      },
+//      "AuthenticationOptions": {
+//        "AuthenticationProviderKey": "Bearer",
+//        "AllowedScopes": []
+//      },
+//      "RateLimitOptions": {
+//        "ClientWhitelist": [],
+//        "EnableRateLimiting": true,
+//        "Period": "1m",
+//        "PeriodTimespan": 1,
+//        "Limit": 100,
+//        "QuotaExceededMessage": "Rate limit exceeded. Try again later.",
+//        "HttpStatusCode": 429
+//      }
+//    },
+
+//    {
+//      "UpstreamPathTemplate": "/Api/Gateway/Fluxcam/IdentityServer/{url}",
+//      "DownstreamPathTemplate": "/{url}",
+//      "DownstreamScheme": "http",
+//      "DownstreamHostAndPorts": [
+//        {
+//          "Host": "localhost",
+//          "Port": 55549
+//        }
+//      ],
+//      "UpstreamHttpMethod": [ "POST" ],
+//      "ReRoutesCaseSensitive": false,
+//      "LoadBalancerOptions": {
+//        "Type": "LeastConnection"
+//      },
+//      "RateLimitOptions": {
+//        "ClientWhitelist": [],
+//        "EnableRateLimiting": true,
+//        "Period": "1m",
+//        "PeriodTimespan": 1,
+//        "Limit": 100,
+//        "QuotaExceededMessage": "Rate limit exceeded. Try again later.",
+//        "HttpStatusCode": 429
+//      }
+//    },
+
+//    {
+//      "UpstreamPathTemplate": "/Api/Gateway/Fluxcam/Gav/{url}",
+//      "DownstreamPathTemplate": "/{url}",
+//      "DownstreamScheme": "http",
+//      "DownstreamHostAndPorts": [
+//        {
+//          "Host": "localhost",
+//          "Port": 7113
+//        }
+//      ],
+//      "UpstreamHttpMethod": [ "POST", "GET" ],
+//      "ReRoutesCaseSensitive": false,
+//      "LoadBalancerOptions": {
+//        "Type": "LeastConnection"
+//      },
+//      "AuthenticationOptions": {
+//        "AuthenticationProviderKey": "Bearer",
+//        "AllowedScopes": []
+//      },
+//      "RouteClaimsRequirement": {
+//        "Role": "ThirdPartyProviders"
+//      },
+//      "RateLimitOptions": {
+//        "ClientWhitelist": [],
+//        "EnableRateLimiting": true,
+//        "Period": "1m",
+//        "PeriodTimespan": 1,
+//        "Limit": 100,
+//        "QuotaExceededMessage": "Rate limit exceeded. Try again later.",
+//        "HttpStatusCode": 429
+//      }
+//    },
+//    {
+//      "UpstreamPathTemplate": "/Api/Gateway/Fluxcam/Bank/{url}",
+//      "DownstreamPathTemplate": "/{url}",
+//      "DownstreamScheme": "http",
+//      "DownstreamHostAndPorts": [
+//        {
+//          "Host": "localhost",
+//          "Port": 7085
+//        }
+//      ],
+//      "UpstreamHttpMethod": [ "GET", "POST", "DELETE", "PUT" ],
+//      "ReRoutesCaseSensitive": false,
+//      "LoadBalancerOptions": {
+//        "Type": "LeastConnection"
+//      },
+//      "AuthenticationOptions": {
+//        "AuthenticationProviderKey": "Bearer",
+//        "AllowedScopes": []
+//      },
+//      "RateLimitOptions": {
+//        "ClientWhitelist": [],
+//        "EnableRateLimiting": true,
+//        "Period": "1m",
+//        "PeriodTimespan": 1,
+//        "Limit": 100,
+//        "QuotaExceededMessage": "Rate limit exceeded. Try again later.",
+//        "HttpStatusCode": 429
+//      }
+//    },
+//    {
+//      "UpstreamPathTemplate": "/Api/Gateway/Fluxcam/BankLogin/Login/Ananymouse/{url}",
+//      "DownstreamPathTemplate": "/{url}",
+//      "DownstreamScheme": "http",
+//      "DownstreamHostAndPorts": [
+//        {
+//          "Host": "localhost",
+//          "Port": 7085
+//        }
+//      ],
+//      "UpstreamHttpMethod": [ "GET" ],
+//      "ReRoutesCaseSensitive": false,
+//      "LoadBalancerOptions": {
+//        "Type": "LeastConnection"
+//      },
+//      "RateLimitOptions": {
+//        "ClientWhitelist": [],
+//        "EnableRateLimiting": true,
+//        "Period": "1m",
+//        "PeriodTimespan": 1,
+//        "Limit": 100,
+//        "QuotaExceededMessage": "Rate limit exceeded. Try again later.",
+//        "HttpStatusCode": 429
+//      }
+//    },
+//    {
+//      "UpstreamPathTemplate": "/Api/Gateway/Fluxcam/BankAudit/AuditTrail/Ananymouse/{url}",
+//      "DownstreamPathTemplate": "/{url}",
+//      "DownstreamScheme": "http",
+//      "DownstreamHostAndPorts": [
+//        {
+//          "Host": "localhost",
+//          "Port": 7085
+//        }
+//      ],
+//      "UpstreamHttpMethod": [ "GET", "POST" ],
+//      "ReRoutesCaseSensitive": false,
+//      "LoadBalancerOptions": {
+//        "Type": "LeastConnection"
+//      },
+//      "RateLimitOptions": {
+//        "ClientWhitelist": [],
+//        "EnableRateLimiting": true,
+//        "Period": "1m",
+//        "PeriodTimespan": 1,
+//        "Limit": 100,
+//        "QuotaExceededMessage": "Rate limit exceeded. Try again later.",
+//        "HttpStatusCode": 429
+//      }
+//    },
+//    {
+//      "UpstreamPathTemplate": "/Api/Gateway/Fluxcam/Localization/Ananymouse/{url}",
+//      "DownstreamPathTemplate": "/{url}",
+//      "DownstreamScheme": "http",
+//      "DownstreamHostAndPorts": [
+//        {
+//          "Host": "localhost",
+//          "Port": 7056
+//        }
+//      ],
+//      "UpstreamHttpMethod": [ "GET", "POST" ],
+//      "ReRoutesCaseSensitive": false,
+//      "LoadBalancerOptions": {
+//        "Type": "LeastConnection"
+//      },
+//      "RateLimitOptions": {
+//        "ClientWhitelist": [],
+//        "EnableRateLimiting": true,
+//        "Period": "1m",
+//        "PeriodTimespan": 1,
+//        "Limit": 100,
+//        "QuotaExceededMessage": "Rate limit exceeded. Try again later.",
+//        "HttpStatusCode": 429
+//      }
+//    },
+//    {
+//      "UpstreamPathTemplate": "/Api/Gateway/Fluxcam/Andriod/Login/{url}",
+//      "DownstreamPathTemplate": "/{url}",
+//      "DownstreamScheme": "http",
+//      "DownstreamHostAndPorts": [
+//        {
+//          "Host": "localhost",
+//          "Port": 7016
+//        }
+//      ],
+//      "UpstreamHttpMethod": [ "POST" ],
+//      "ReRoutesCaseSensitive": false,
+//      "LoadBalancerOptions": {
+//        "Type": "LeastConnection"
+//      },
+//      "RateLimitOptions": {
+//        "ClientWhitelist": [],
+//        "EnableRateLimiting": true,
+//        "Period": "1m",
+//        "PeriodTimespan": 1,
+//        "Limit": 100,
+//        "QuotaExceededMessage": "Rate limit exceeded. Try again later.",
+//        "HttpStatusCode": 429
+//      }
+//    },
+//    {
+//      "UpstreamPathTemplate": "/Api/Gateway/Fluxcam/Members/{url}",
+//      "DownstreamPathTemplate": "/{url}",
+//      "DownstreamScheme": "http",
+//      "DownstreamHostAndPorts": [
+//        {
+//          "Host": "localhost",
+//          "Port": 7016
+//        }
+//      ],
+//      "UpstreamHttpMethod": [ "GET", "POST", "DELETE", "PUT" ],
+//      "ReRoutesCaseSensitive": false,
+//      "LoadBalancerOptions": {
+//        "Type": "LeastConnection"
+//      },
+//      "AuthenticationOptions": {
+//        "AuthenticationProviderKey": "Bearer",
+//        "AllowedScopes": []
+//      },
+//      "RateLimitOptions": {
+//        "ClientWhitelist": [],
+//        "EnableRateLimiting": true,
+//        "Period": "1m",
+//        "PeriodTimespan": 1,
+//        "Limit": 100,
+//        "QuotaExceededMessage": "Rate limit exceeded. Try again later.",
+//        "HttpStatusCode": 429
+//      }
+//    },
+//    {
+//      "UpstreamPathTemplate": "/Api/Gateway/Fluxcam/Communication/{url}",
+//      "DownstreamPathTemplate": "/{url}",
+//      "DownstreamScheme": "http",
+//      "DownstreamHostAndPorts": [
+//        {
+//          "Host": "localhost",
+//          "Port": 7015
+//        }
+//      ],
+//      "UpstreamHttpMethod": [ "GET", "POST", "DELETE", "PUT" ],
+//      "ReRoutesCaseSensitive": false,
+//      "LoadBalancerOptions": {
+//        "Type": "LeastConnection"
+//      },
+//      "AuthenticationOptions": {
+//        "AuthenticationProviderKey": "Bearer",
+//        "AllowedScopes": []
+//      },
+//      "RateLimitOptions": {
+//        "ClientWhitelist": [],
+//        "EnableRateLimiting": true,
+//        "Period": "1m",
+//        "PeriodTimespan": 1,
+//        "Limit": 100,
+//        "QuotaExceededMessage": "Rate limit exceeded. Try again later.",
+//        "HttpStatusCode": 429
+//      }
+//    },
+//    {
+//      "UpstreamPathTemplate": "/Api/Gateway/Fluxcam/Accounting/{url}",
+//      "DownstreamPathTemplate": "/{url}",
+//      "DownstreamScheme": "http",
+//      "DownstreamHostAndPorts": [
+//        {
+//          "Host": "localhost",
+//          "Port": 7055
+//        }
+//      ],
+//      "UpstreamHttpMethod": [ "GET", "POST", "DELETE", "PUT" ],
+//      "ReRoutesCaseSensitive": false,
+//      "LoadBalancerOptions": {
+//        "Type": "LeastConnection"
+//      },
+//      "AuthenticationOptions": {
+//        "AuthenticationProviderKey": "Bearer",
+//        "AllowedScopes": []
+//      },
+//      "RateLimitOptions": {
+//        "ClientWhitelist": [],
+//        "EnableRateLimiting": true,
+//        "Period": "1m",
+//        "PeriodTimespan": 1,
+//        "Limit": 100,
+//        "QuotaExceededMessage": "Rate limit exceeded. Try again later.",
+//        "HttpStatusCode": 429
+//      }
+//    }
+//  ],
+//  "SwaggerEndPoints": [
+//    {
+//      "Key": "Loans",
+//      "Config": [
+//        {
+//          "Name": "FLUX SAL",
+//          "Version": "1.0",
+//          "Url": "https://identity.bapcculcbs.com/swagger/v1/swagger.json"
+//        }
+//      ]
+//    }
+//  ],
+//  "GlobalConfiguration": {
+//    "BaseUrl": "http://0.0.0.0:5239",
+//    "RateLimitOptions": {
+//      "ClientIdHeader": "ClientId",
+//      "QuotaExceededMessage": "Global rate limit exceeded. Try again later.",
+//      "HttpStatusCode": 429
+//    },
+//    "ServiceDiscoveryProvider": {
+//      "Host": "localhost",
+//      "Port": 8500,
+//      "Type": "Consul"
+//    }
+//  }
+//}
+
+
+
+
+
+
+
+
+
+{
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/Api/Gateway/Fluxcam/Loan/{url}",
+      "DownstreamPathTemplate": "/{url}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7041
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET", "POST", "DELETE", "PUT" ],
+      "ReRoutesCaseSensitive": false,
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1m",
+        "PeriodTimespan": 1,
+        "Limit": 100,
+        "QuotaExceededMessage": "Rate limit exceeded. Try again later.",
+        "HttpStatusCode": 429
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/Api/Gateway/Fluxcam/Transaction/{url}",
+      "DownstreamPathTemplate": "/{url}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7113
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET", "POST", "DELETE", "PUT" ],
+      "ReRoutesCaseSensitive": false,
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1m",
+        "PeriodTimespan": 1,
+        "Limit": 100,
+        "QuotaExceededMessage": "Rate limit exceeded. Try again later.",
+        "HttpStatusCode": 429
+      }
+    },
+
+    {
+      "UpstreamPathTemplate": "/Api/Gateway/Fluxcam/IdentityServer/{url}",
+      "DownstreamPathTemplate": "/{url}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 55549
+        }
+      ],
+      "UpstreamHttpMethod": [ "POST" ],
+      "ReRoutesCaseSensitive": false,
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1m",
+        "PeriodTimespan": 1,
+        "Limit": 100,
+        "QuotaExceededMessage": "Rate limit exceeded. Try again later.",
+        "HttpStatusCode": 429
+      }
+    },
+
+    {
+      "UpstreamPathTemplate": "/Api/Gateway/Fluxcam/Gav/{url}",
+      "DownstreamPathTemplate": "/{url}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7113
+        }
+      ],
+      "UpstreamHttpMethod": [ "POST", "GET" ],
+      "ReRoutesCaseSensitive": false,
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "RouteClaimsRequirement": {
+        "Role": "ThirdPartyProviders"
+      },
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1m",
+        "PeriodTimespan": 1,
+        "Limit": 100,
+        "QuotaExceededMessage": "Rate limit exceeded. Try again later.",
+        "HttpStatusCode": 429
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/Api/Gateway/Fluxcam/Bank/{url}",
+      "DownstreamPathTemplate": "/{url}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7085
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET", "POST", "DELETE", "PUT" ],
+      "ReRoutesCaseSensitive": false,
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1m",
+        "PeriodTimespan": 1,
+        "Limit": 100,
+        "QuotaExceededMessage": "Rate limit exceeded. Try again later.",
+        "HttpStatusCode": 429
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/Api/Gateway/Fluxcam/BankLogin/Login/Ananymouse/{url}",
+      "DownstreamPathTemplate": "/{url}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7085
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET" ],
+      "ReRoutesCaseSensitive": false,
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1m",
+        "PeriodTimespan": 1,
+        "Limit": 100,
+        "QuotaExceededMessage": "Rate limit exceeded. Try again later.",
+        "HttpStatusCode": 429
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/Api/Gateway/Fluxcam/BankAudit/AuditTrail/Ananymouse/{url}",
+      "DownstreamPathTemplate": "/{url}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7085
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "ReRoutesCaseSensitive": false,
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1m",
+        "PeriodTimespan": 1,
+        "Limit": 100,
+        "QuotaExceededMessage": "Rate limit exceeded. Try again later.",
+        "HttpStatusCode": 429
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/Api/Gateway/Fluxcam/Localization/Ananymouse/{url}",
+      "DownstreamPathTemplate": "/{url}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7056
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "ReRoutesCaseSensitive": false,
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1m",
+        "PeriodTimespan": 1,
+        "Limit": 100,
+        "QuotaExceededMessage": "Rate limit exceeded. Try again later.",
+        "HttpStatusCode": 429
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/Api/Gateway/Fluxcam/Andriod/Login/{url}",
+      "DownstreamPathTemplate": "/{url}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7016
+        }
+      ],
+      "UpstreamHttpMethod": [ "POST" ],
+      "ReRoutesCaseSensitive": false,
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1m",
+        "PeriodTimespan": 1,
+        "Limit": 100,
+        "QuotaExceededMessage": "Rate limit exceeded. Try again later.",
+        "HttpStatusCode": 429
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/Api/Gateway/Fluxcam/CMoney/Members/{url}",
+      "DownstreamPathTemplate": "/{url}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7016
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
+      "ReRoutesCaseSensitive": false,
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1m",
+        "PeriodTimespan": 1,
+        "Limit": 100,
+        "QuotaExceededMessage": "Rate limit exceeded. Try again later.",
+        "HttpStatusCode": 429
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/Api/Gateway/Fluxcam/Members/{url}",
+      "DownstreamPathTemplate": "/{url}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7016
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET", "POST", "DELETE", "PUT" ],
+      "ReRoutesCaseSensitive": false,
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1m",
+        "PeriodTimespan": 1,
+        "Limit": 100,
+        "QuotaExceededMessage": "Rate limit exceeded. Try again later.",
+        "HttpStatusCode": 429
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/Api/Gateway/Fluxcam/Communication/{url}",
+      "DownstreamPathTemplate": "/{url}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7015
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET", "POST", "DELETE", "PUT" ],
+      "ReRoutesCaseSensitive": false,
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1m",
+        "PeriodTimespan": 1,
+        "Limit": 100,
+        "QuotaExceededMessage": "Rate limit exceeded. Try again later.",
+        "HttpStatusCode": 429
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/Api/Gateway/Fluxcam/Accounting/{url}",
+      "DownstreamPathTemplate": "/{url}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7055
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET", "POST", "DELETE", "PUT" ],
+      "ReRoutesCaseSensitive": false,
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1m",
+        "PeriodTimespan": 1,
+        "Limit": 100,
+        "QuotaExceededMessage": "Rate limit exceeded. Try again later.",
+        "HttpStatusCode": 429
+      }
+    }
+  ],
+  "SwaggerEndPoints": [
+    {
+      "Key": "Loans",
+      "Config": [
+        {
+          "Name": "FLUX SAL",
+          "Version": "1.0",
+          "Url": "https://identity.bapcculcbs.com/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://0.0.0.0:5239",
+    "RateLimitOptions": {
+      "ClientIdHeader": "ClientId",
+      "QuotaExceededMessage": "Global rate limit exceeded. Try again later.",
+      "HttpStatusCode": 429
+    },
+    "ServiceDiscoveryProvider": {
+      "Host": "localhost",
+      "Port": 8500,
+      "Type": "Consul"
+    }
+  }
+}

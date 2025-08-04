@@ -1,0 +1,791 @@
+﻿{
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/TechCare/api/v1/AddClient",
+      "DownstreamPathTemplate": "/api/v1/AddClient",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "clientms.credixcm.com"
+        }
+      ],
+      "UpstreamHttpMethod": [ "POST" ],
+     
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/TechCare/api/v1/SubscriptionCallback",
+      "DownstreamPathTemplate": "/api/v1/SubscriptionCallback",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "clientms.credixcm.com"
+        }
+      ],
+      "UpstreamHttpMethod": [ "POST" ],
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/TechCare/api/v1/Login",
+      "DownstreamPathTemplate": "/api/v1/Login",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "clientms.credixcm.com"
+        }
+      ],
+      "UpstreamHttpMethod": [ "POST" ],
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/AddUssdClient/ussd",
+      "DownstreamPathTemplate": "/api/v1/AddUssdClient/ussd",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "clientms.credixcm.com"
+        }
+      ],
+
+      "UpstreamHttpMethod": [ "POST" ],
+   
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/UpdateClient/{msisdn}",
+      "DownstreamPathTemplate": "/api/v1/UpdateClient/{msisdn}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "clientms.credixcm.com"
+        }
+      ],
+
+      "UpstreamHttpMethod": [ "PUT" ],
+   
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/UploadClientPhoto/{msisdn}",
+      "DownstreamPathTemplate": "/api/v1/UploadClientPhoto/{msisdn}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "clientms.credixcm.com"
+        }
+      ],
+
+      "UpstreamHttpMethod": [ "PUT" ],
+   
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/UploadNationalIDCard/{msisdn}",
+      "DownstreamPathTemplate": "/api/v1/UploadNationalIDCard/{msisdn}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "clientms.credixcm.com"
+        }
+      ],
+
+      "UpstreamHttpMethod": [ "PUT" ],
+   
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/ConfirmClientPhoto/{msisdn}",
+      "DownstreamPathTemplate": "/api/v1/ConfirmClientPhoto/{msisdn}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "clientms.credixcm.com"
+        }
+      ],
+
+      "UpstreamHttpMethod": [ "PUT" ],
+    
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/ConfirmClientNationalIDCard/{msisdn}",
+      "DownstreamPathTemplate": "/api/v1/ConfirmClientNationalIDCard/{msisdn}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "clientms.credixcm.com"
+        }
+      ],
+
+      "UpstreamHttpMethod": [ "PUT" ],
+    
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/ClientUnsubscription/{msisdn}",
+      "DownstreamPathTemplate": "/api/v1/ClientUnsubscription/{msisdn}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "clientms.credixcm.com"
+        }
+      ],
+
+      "UpstreamHttpMethod": [ "PUT" ],
+  
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/ChangeLanguage/{msisdn}",
+      "DownstreamPathTemplate": "/api/v1/ChangeLanguage/{msisdn}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "clientms.credixcm.com"
+        }
+      ],
+
+      "UpstreamHttpMethod": [ "PUT" ],
+     
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/GetClientNameByInsuredID/ussd/{insuranceID}",
+      "DownstreamPathTemplate": "/api/v1/GetClientNameByInsuredID/ussd/{insuranceID}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "clientms.credixcm.com"
+        }
+      ],
+
+      "UpstreamHttpMethod": [ "GET" ],
+  
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/GetClient/{msisdn}",
+      "DownstreamPathTemplate": "/api/v1/GetClient/{msisdn}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "clientms.credixcm.com"
+        }
+      ],
+
+      "UpstreamHttpMethod": [ "GET" ],
+     
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/GetClients/All",
+      "DownstreamPathTemplate": "/api/v1/GetClients/All",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "clientms.credixcm.com"
+        }
+      ],
+
+      "UpstreamHttpMethod": [ "GET" ],
+     
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/GetClients/ByPaging",
+      "DownstreamPathTemplate": "/api/v1/GetClients/ByPaging",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "clientms.credixcm.com"
+        }
+      ],
+    
+      "UpstreamHttpMethod": [ "GET" ],
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/DeleteClient/{msisdn}",
+      "DownstreamPathTemplate": "/api/v1/DeleteClient/{msisdn}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "clientms.credixcm.com"
+        }
+      ],
+
+      "UpstreamHttpMethod": [ "DELETE" ],
+  
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/GetClientContext/ussd/{msisdn}",
+      "DownstreamPathTemplate": "/api/v1/GetClientContext/ussd/{msisdn}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "clientms.credixcm.com"
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET" ],
+    
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/AddClaimPolicy",
+      "DownstreamPathTemplate": "/api/v1/AddClaimPolicy",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "clientms.credixcm.com"
+        }
+      ],
+      "UpstreamHttpMethod": [ "POST" ],
+     
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/UpdateClaimPolicy/{policyid}",
+      "DownstreamPathTemplate": "/api/v1/UpdateClaimPolicy/{policyid}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "clientms.credixcm.com"
+        }
+      ],
+      "UpstreamHttpMethod": [ "PUT" ],
+    
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/GetClaimPolicy/{policyid}",
+      "DownstreamPathTemplate": "/api/v1/GetClaimPolicy/{policyid}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "clientms.credixcm.com"
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET" ],
+   
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/DeleteClaimPolicy/{policyid}",
+      "DownstreamPathTemplate": "/api/v1/DeleteClaimPolicy/{policyid}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "clientms.credixcm.com"
+        }
+      ],
+      "UpstreamHttpMethod": [ "DELETE" ],
+    
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/AddClaimType",
+      "DownstreamPathTemplate": "/api/v1/AddClaimType",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "clientms.credixcm.com"
+        }
+      ],
+      "UpstreamHttpMethod": [ "POST" ],
+    
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/UpdateClaimType/{id}",
+      "DownstreamPathTemplate": "/api/v1/UpdateClaimType/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "clientms.credixcm.com"
+        }
+      ],
+      "UpstreamHttpMethod": [ "PUT" ],
+   
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/GetClaimType/{id}",
+      "DownstreamPathTemplate": "/api/v1/GetClaimType/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "clientms.credixcm.com"
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET" ],
+     
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/GetClaimTypes/All",
+      "DownstreamPathTemplate": "/api/v1/GetClaimTypes/All",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "clientms.credixcm.com"
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET" ],
+  
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/GetClaimPolicys/All",
+      "DownstreamPathTemplate": "/api/v1/GetClaimPolicys/All",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "clientms.credixcm.com"
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET" ],
+     
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/GetClaimPolicyByPolicyCode/{policyCode}",
+      "DownstreamPathTemplate": "/api/v1/GetClaimPolicyByPolicyCode/{policyCode}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "clientms.credixcm.com"
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET" ],
+     
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/DeleteClaimType/{id}",
+      "DownstreamPathTemplate": "/api/v1/DeleteClaimType/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "clientms.credixcm.com"
+        }
+      ],
+      "UpstreamHttpMethod": [ "DELETE" ],
+     
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/AddSubcriptionConfiguration",
+      "DownstreamPathTemplate": "/api/v1/AddSubcriptionConfiguration",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "clientms.credixcm.com"
+        }
+      ],
+      "UpstreamHttpMethod": [ "POST" ],
+    
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/UpdateSubcriptionConfiguration/{id}",
+      "DownstreamPathTemplate": "/api/v1/UpdateSubcriptionConfiguration/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "clientms.credixcm.com"
+        }
+      ],
+      "UpstreamHttpMethod": [ "PUT" ],
+    
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/GetSubcriptionConfiguration/{id}",
+      "DownstreamPathTemplate": "/api/v1/GetSubcriptionConfiguration/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "clientms.credixcm.com"
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET" ],
+     
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/GetSubcriptionFee",
+      "DownstreamPathTemplate": "/api/v1/GetSubcriptionFee",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "clientms.credixcm.com"
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET" ],
+    
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/GetSubcriptionConfigurations/All",
+      "DownstreamPathTemplate": "/api/v1/GetSubcriptionConfigurations/All",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "clientms.credixcm.com"
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET" ],
+    
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/DeleteSubcriptionConfiguration/{id}",
+      "DownstreamPathTemplate": "/api/v1/DeleteSubcriptionConfiguration/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "clientms.credixcm.com"
+        }
+      ],
+      "UpstreamHttpMethod": [ "DELETE" ],
+    
+      "SwaggerKey": "Clients",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/AddInsurancePolicy",
+      "DownstreamPathTemplate": "/api/v1/AddInsurancePolicy",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "accountms.credixcm.com"
+        }
+      ],
+      "UpstreamHttpMethod": [ "POST" ],
+    
+      "SwaggerKey": "Accounts",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/UpdateInsurancePolicy/{policyid}",
+      "DownstreamPathTemplate": "/api/v1/UpdateInsurancePolicy/{policyid}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "accountms.credixcm.com"
+        }
+      ],
+      "UpstreamHttpMethod": [ "PUT" ],
+    
+      "SwaggerKey": "Accounts",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/GetInsurancePolicy/{policyid}",
+      "DownstreamPathTemplate": "/api/v1/GetInsurancePolicy/{policyid}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "accountms.credixcm.com"
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET" ],
+    
+      "SwaggerKey": "Accounts",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/GetInsurancePolicyByPolicyCode/{PolicyCode}",
+      "DownstreamPathTemplate": "/api/v1/GetInsurancePolicyByPolicyCode/{PolicyCode}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "accountms.credixcm.com"
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET" ],
+   
+      "SwaggerKey": "Accounts",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/GetInsurancePolicys/All",
+      "DownstreamPathTemplate": "/api/v1/GetInsurancePolicys/All",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "accountms.credixcm.com"
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET" ],
+   
+      "SwaggerKey": "Accounts",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/DeleteInsurancePolicy/{policyid}",
+      "DownstreamPathTemplate": "/api/v1/DeleteInsurancePolicy/{policyid}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "accountms.credixcm.com"
+        }
+      ],
+      "UpstreamHttpMethod": [ "DELETE" ],
+   
+      "SwaggerKey": "Accounts",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/AddInsuranceSaving",
+      "DownstreamPathTemplate": "/api/v1/AddInsuranceSaving",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "accountms.credixcm.com"
+        }
+      ],
+      "UpstreamHttpMethod": [ "POST" ],
+   
+      "SwaggerKey": "Accounts",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/GetClientInsuranceSavingStatus/{msisdn}",
+      "DownstreamPathTemplate": "/api/v1/GetClientInsuranceSavingStatus/{msisdn}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "accountms.credixcm.com"
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET" ],
+    
+      "SwaggerKey": "Accounts",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/WithdrawalRequestProposition",
+      "DownstreamPathTemplate": "/api/v1/WithdrawalRequestProposition",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "accountms.credixcm.com"
+        }
+      ],
+      "UpstreamHttpMethod": [ "POST" ],
+     
+      "SwaggerKey": "Accounts",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/InitiateAnInsuranceSavingRequest",
+      "DownstreamPathTemplate": "/api/v1/InitiateAnInsuranceSavingRequest",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "accountms.credixcm.com"
+        }
+      ],
+      "UpstreamHttpMethod": [ "POST" ],
+    
+      "SwaggerKey": "Accounts",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/MakeWithdrawal",
+      "DownstreamPathTemplate": "/api/v1/MakeWithdrawal",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "accountms.credixcm.com"
+        }
+      ],
+      "UpstreamHttpMethod": [ "POST" ],
+   
+      "SwaggerKey": "Accounts",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/InsuranceSavingRequestConfirmationCallback",
+      "DownstreamPathTemplate": "/api/v1/InsuranceSavingRequestConfirmationCallback",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "accountms.credixcm.com"
+        }
+      ],
+      "UpstreamHttpMethod": [ "POST" ],
+      
+      "SwaggerKey": "Accounts",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/GetClientInsuranceSavingStatusForAnotherPersonByInsuranceCode/{benficialInsuranceCode}",
+      "DownstreamPathTemplate": "/api/v1/GetClientInsuranceSavingStatusForAnotherPersonByInsuranceCode/{benficialInsuranceCode}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "accountms.credixcm.com"
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET" ],
+    
+      "SwaggerKey": "Accounts",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/InitiateAnInsuranceSavingRequestForAnotherPerson",
+      "DownstreamPathTemplate": "/api/v1/InitiateAnInsuranceSavingRequestForAnotherPerson",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "accountms.credixcm.com"
+        }
+      ],
+      "UpstreamHttpMethod": [ "POST" ],
+   
+      "SwaggerKey": "Accounts",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/GetCustomerLastTransactions/{msisdn}/{numberOfTransactions}",
+      "DownstreamPathTemplate": "/api/v1/GetCustomerLastTransactions/{msisdn}/{numberOfTransactions}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "accountms.credixcm.com"
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET" ],
+    
+      "SwaggerKey": "Accounts",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/GetCustomerScoring/{msisdn}",
+      "DownstreamPathTemplate": "/api/v1/GetCustomerScoring/{msisdn}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "accountms.credixcm.com"
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET" ],
+   
+      "SwaggerKey": "Accounts",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/GetCustomerLoanStatus/{msisdn}",
+      "DownstreamPathTemplate": "/api/v1/GetCustomerLoanStatus/{msisdn}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "accountms.credixcm.com"
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET" ],
+    
+      "SwaggerKey": "Accounts",
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "UpstreamPathTemplate": "/Gateway/TechCare/api/v1/GetCustomerBalance/{msisdn}",
+      "DownstreamPathTemplate": "/api/v1/GetCustomerBalance/{msisdn}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "accountms.credixcm.com"
+         
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET" ],
+     
+
+      "SwaggerKey": "Accounts",
+      "FileCacheOptions": { "TtlSeconds": 30 },
+      "DownstreamHeaders": {
+        "Authorization": "Bearer {token}"
+      }
+
+    }
+  ],
+  "SwaggerEndPoints": [
+    {
+      "Key": "Clients",
+      "Config": [
+        {
+          "Name": "Client Microservice TECHCARE",
+          "Version": "1.0",
+          "Url": "https://clientms.credixcm.com/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "Accounts",
+      "Config": [
+        {
+          "Name": "Account Microservice TECHCARE",
+          "Version": "1.0",
+          "Url": "https://accountms.credixcm.com/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "Loan",
+      "Config": [
+        {
+          "Name": "Loan Microservice",
+          "Version": "1.0",
+          "Url": "https://clientms.credixcm.com/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ],
+
+  "GlobalConfiguration": {
+    //"BaseUrl": "http://0.0.0.0:5239"
+  }
+}

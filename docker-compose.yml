@@ -1,0 +1,72 @@
+version: '3'
+services:
+  cbs_account:
+    build:
+      context: ./
+      dockerfile: ./dockerfiles/account.dockerfile
+    image: biosx/cbs_account:20240225-1153
+    ports:
+      - 18001:8080
+    environment:
+      - APP_DLL_NAME=CBS.AccountManagement.API.dll
+      - APPSETTING_urls=http://0.0.0.0:8080
+      - APPSETTING_Conn.POSDbConnectionString="data source=EC2AMAZ-U9A2PAD;Initial Catalog=CBSAccountManagementDB;user id=sa;password=Admin@1234_; TrustServerCertificate=True"
+      - APPSETTING_BiosLogger.Options.FolderPath=/opt/log/Normal
+      - APPSETTING_LoogerSetting.LoggerPath=/opt/log/GloblaRequest
+      - APPSETTING_Logging.NLog="data source=EC2AMAZ-U9A2PAD;Initial Catalog=CBSAccountManagementDB;user id=sa;password=Admin@1234_; TrustServerCertificate=True"
+      - APPSETTING_Logging.AuditTrails.BaseUrl=https://cbs4u-sysconfig.prodmomokash.com/
+      - APPSETTING_CustomerManagement.BaseUrl=http://cbs_customer/
+  cbs_communication:
+    build:
+      context: ./
+      dockerfile: ./dockerfiles/communication.dockerfile
+    image: biosx/cbs_communication:20240225-1153
+    ports:
+      - 18002:8080
+    environment:
+      - APP_DLL_NAME=CBS.Communication.API.dll
+      - APPSETTING_urls=http://0.0.0.0:8080
+      - APPSETTING_AuditTrails.BaseUrl=https://cbs4u-sysconfig.prodmomokash.com/
+      - APPSETTING_Conn.POSDbConnectionString="data source=EC2AMAZ-U9A2PAD;Initial Catalog=CBSCommunicationDB;user id=sa;password=Admin@1234_; TrustServerCertificate=True;"
+      - APPSETTING_TransactionManagement.CreateAccountUrl=https://cbs_transaction/api/v1/Account
+      - APPSETTING_BiosLogger.Options.FolderPath=/opt/log/Normal
+      - APPSETTING_LoogerSetting.LoggerPath=/opt/log/GloblaRequest
+      - APPSETTING_SMSSettings.OtherSingleSMSAPIBaseEdnPoint=https://api.avlytext.com/v1/sms
+      - APPSETTING_SMSSettings.OtherMultipleSMSAPIBaseEdnPoint=https://api.avlytext.com/v1/sms/bulk
+      - APPSETTING_SMSSettings.SMSAPIKEY=0PrGXwNWXdjDKEaVw1Uu7qqkt0JvAVitCVfAT89VwTBDCtGOCHsowwqcGArUEA9DyK03
+      - APPSETTING_Logging.NLog="data source=EC2AMAZ-U9A2PAD;Initial Catalog=CBSCommunicationDB;user id=sa;password=Admin@1234_; TrustServerCertificate=True;"
+  cbs_customer:
+    build:
+      context: ./
+      dockerfile: ./dockerfiles/customer.dockerfile
+    image: biosx/cbs_customer:20240225-1153
+    ports:
+      - 18003:8080
+    environment:
+      - APP_DLL_NAME=CBS.CUSTOMER.API.dll
+      - APPSETTING_urls=http://0.0.0.0:8080
+      - APPSETTING_AuditTrails.BaseUrl=https://cbs4u-sysconfig.prodmomokash.com/
+      - APPSETTING_Conn.POSDbConnectionString="data source=EC2AMAZ-U9A2PAD;Initial Catalog=CBSCustomerDB;user id=sa;password=Admin@1234_; TrustServerCertificate=True;"
+      - APPSETTING_TransactionManagement.CreateAccountUrl=https://cbs_transaction/api/v1/Account
+      - APPSETTING_BiosLogger.Options.FolderPath=/opt/log/Normal
+      - APPSETTING_LoogerSetting.LoggerPath=/opt/log/GloblaRequest
+      - APPSETTING_SMSSettings.OtherSingleSMSAPIBaseEdnPoint=https://api.avlytext.com/v1/sms
+      - APPSETTING_SMSSettings.OtherMultipleSMSAPIBaseEdnPoint=https://api.avlytext.com/v1/sms/bulk
+      - APPSETTING_SMSSettings.SMSAPIKEY=0PrGXwNWXdjDKEaVw1Uu7qqkt0JvAVitCVfAT89VwTBDCtGOCHsowwqcGArUEA9DyK03
+      - APPSETTING_Logging.NLog="data source=EC2AMAZ-U9A2PAD;Initial Catalog=CBSCustomerDB;user id=sa;password=Admin@1234_; TrustServerCertificate=True;"
+  cbs_transaction:
+    build:
+      context: ./
+      dockerfile: ./dockerfiles/transaction.dockerfile
+    image: biosx/cbs_transaction:20240225-1153
+    ports:
+      - 18004:8080
+    environment:
+      - APP_DLL_NAME=CBS.TransactionManagement.API.dll
+      - APPSETTING_urls=http://0.0.0.0:8080
+      - APPSETTING_AuditTrails.BaseUrl=https://cbs4u-sysconfig.prodmomokash.com/
+      - APPSETTING_Conn.POSDbConnectionString="data source=EC2AMAZ-U9A2PAD;Initial Catalog=CBSTransactionManagementDB;user id=sa;password=Admin@1234_; TrustServerCertificate=True"
+      - APPSETTING_Customer.CustomerBaseUrl=http://cbs_customer/
+      - APPSETTING_Accounting.AccountingBaseURL=http://cbs_account/
+      - APPSETTING_BiosLogger.Options.FolderPath=/opt/log/Normal
+      - APPSETTING_LoogerSetting.LoggerPath=/opt/log/GloblaRequest

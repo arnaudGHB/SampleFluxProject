@@ -1,0 +1,64 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\BudgetPeriods\**" />
+    <Content Remove="Controllers\BudgetPeriods\**" />
+    <EmbeddedResource Remove="Controllers\BudgetPeriods\**" />
+    <None Remove="Controllers\BudgetPeriods\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ExcelDataReader.DataSet" Version="3.6.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.10.0" />
+    <PackageReference Include="Hangfire.AspNetCore" Version="1.8.12" />
+    <PackageReference Include="Hangfire.SqlServer" Version="1.8.12" />
+    <PackageReference Include="MediatR" Version="12.4.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="7.0.14" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.12" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="7.7.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.13">
+      
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.5.0" />
+	  <!--<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.2" />-->
+    <PackageReference Include="NLog.Web.AspNetCore" Version="5.3.5" />
+    <PackageReference Include="Serilog" Version="3.1.1" />
+    <PackageReference Include="Serilog.AspNetCore" Version="7.0.0" />
+    <PackageReference Include="Serilog.Extensions.Autofac.DependencyInjection" Version="5.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\APICallerHelper\CBS.APICaller.Helper\CBS.APICaller.Helper.csproj" />
+    <ProjectReference Include="..\..\..\Common\ServiceDiscovery\CBS.ServicesDelivery.Service\CBS.ServicesDelivery.Service.csproj" />
+    <ProjectReference Include="..\..\TransactionManagement\CBS.TransactionManagement.Domain\CBS.TransactionManagement.Domain.csproj" />
+    <ProjectReference Include="..\CBS.AccountManagement.Domain\CBS.AccountManagement.Domain.csproj" />
+    <ProjectReference Include="..\CBS.AccountManagement.MediatR\CBS.AccountManagement.MediatR.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="CBS.CustomLog.Logger">
+      <HintPath>CBS.CustomLog.Logger.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Reports\" />
+    <Folder Include="wwwroot\MembersAccountExport\" />
+    <Folder Include="wwwroot\Migration\" />
+  </ItemGroup>
+<PropertyGroup>
+  <EnableMSDeployAppOffline>true</EnableMSDeployAppOffline>
+</PropertyGroup>
+</Project>

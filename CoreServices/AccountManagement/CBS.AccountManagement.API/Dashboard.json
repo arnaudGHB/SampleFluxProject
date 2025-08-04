@@ -1,0 +1,122 @@
+{
+  "CashInHand": {
+    "Code": 57101,
+    "CodeArray": [57101],
+    "HasArray": false,
+    "Name": "Cash In Hand",
+    "Category": "Cash",
+    "Description": "Physical cash maintained at premises"
+  },
+  "CashInBank": {
+    "Code": 56,
+    "CodeArray": [56],
+    "HasArray": false,
+    "Name": "Cash In Bank",
+    "Category": "Cash",
+    "Description": "Cash deposited in banking institutions"
+  },
+  "CashInVault": {
+    "Code": 57102,
+    "CodeArray": [57102],
+    "HasArray": false,
+    "Name": "Cash In Vault",
+    "Category": "Cash",
+    "Description": "Cash stored in secure vault"
+  },
+  "PreferenceShare": {
+    "Code": 18,
+    "CodeArray": [181110,181120 ],
+    "HasArray": false,
+    "Name": "Preference Share",
+    "Category": "Shares",
+    "Description": "Preferred stock shares"
+  },
+  "OrdinaryShares": {
+    "Code": 1000,
+    "CodeArray": [1000],
+    "HasArray": false,
+    "Name": "Ordinary Shares",
+    "Category": "Shares",
+    "Description": "Common stock shares"
+  },
+  "Deposit": {
+    "Code": 3711,
+    "CodeArray": [3711],
+    "HasArray": false,
+    "Name": "Deposit",
+    "Category": "Deposits",
+    "Description": "Standard deposits"
+  },
+  "Savings": {
+    "Code": 373,
+    "CodeArray": [373],
+    "HasArray": false,
+    "Name": "Savings",
+    "Category": "Deposits",
+    "Description": "Savings accounts"
+  },
+  "Gav": {
+    "Code": 3712,
+    "CodeArray": [3712],
+    "HasArray": false,
+    "Name": "GAV",
+    "Category": "Deposits",
+    "Description": "GAV accounts"
+  },
+  "DailyCollections": {
+    "Code": 3801,
+    "CodeArray": [3801],
+    "HasArray": false,
+    "Name": "Daily Collections",
+    "Category": "Deposits",
+    "Description": "Daily collected funds"
+  },
+  "MTNMobileMoney": {
+    "Code": 4011,
+    "CodeArray": [401100600,401100500],
+    "HasArray": true,
+    "Name": "MTN Mobile Money",
+    "Category": "MobilePayments",
+    "Description": "MTN mobile payment service"
+  },
+  "OrangeMoney": {
+    "Code": 401100700,
+    "CodeArray": [401100700],
+    "HasArray": false,
+    "Name": "Orange Money",
+    "Category": "MobilePayments",
+    "Description": "Orange mobile payment service"
+  },
+  "MTNMobileMoneyMaster": {
+    "Code": 401100000,
+    "CodeArray": [401100000],
+    "HasArray": false,
+    "Name": "MTN Mobile Money Master",
+    "Category": "MobilePayments",
+    "Description": "MTN mobile payment service"
+  },
+  "OrangeMoneyMaster": {
+    "Code": 401100601,
+    "CodeArray": [401100601],
+    "HasArray": false,
+    "Name": "Orange Money Master",
+    "Category": "MobilePayments",
+    "Description": "Orange mobile payment service"
+  },
+  "TotalExpense": {
+    "Code": 6,
+    "CodeArray": [6],
+    "HasArray": false,
+    "Name": "Total Expense",
+    "Category": "Financials",
+    "Description": "Sum of all expenses"
+  },
+  "TotalIncome": {
+    "Code": 7,
+    "CodeArray": [7],
+    "HasArray": false,
+    "Name": "Total Income",
+    "Category": "Financials",
+    "Description": "Sum of all income"
+  }
+}

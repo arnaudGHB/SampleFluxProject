@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CBS.AccountManagement.Data 
+{
+  
+    public class CashMovementTrackingConfiguration :BaseEntity
+    {
+        public string Id { get; set; }
+        public string Name { get; set; }
+        public string MovementType { get; set; }
+        public string Duration { get; set; }
+
+        public string AlertTimeBefore { get; set; }
+        public string MessageBeforeAlertTime { get; set; }
+        public string AlertTimeAfter { get; set; }
+        public string MessageAfterAlertTime { get; set; }
+        public string From { get; set; }
+        public string To { get; set; }
+    }
+}

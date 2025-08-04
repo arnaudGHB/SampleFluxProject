@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="DocumentUploader\Queries\**" />
+    <EmbeddedResource Remove="DocumentUploader\Queries\**" />
+    <None Remove="DocumentUploader\Queries\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="DocumentUploader\Handlers\DeleteDocumentUploadedHandler.cs" />
+    <Compile Remove="DocumentUploader\Handlers\GetAllDocumentUploadedQueryHandler.cs" />
+    <Compile Remove="DocumentUploader\Handlers\GetDocumentUploadedQueryHandler.cs" />
+    <Compile Remove="DocumentUploader\Handlers\UpdateDocumentUploadedCommandHandler.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="FluentValidation" Version="11.8.0" />
+    <PackageReference Include="MediatR" Version="12.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CBS.BankMGT.Data\CBS.BankMGT.Data.csproj" />
+    <ProjectReference Include="..\CBS.BankMGT.Helper\CBS.BankMGT.Helper.csproj" />
+    <ProjectReference Include="..\CBS.BankMGT.Repository\CBS.BankMGT.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

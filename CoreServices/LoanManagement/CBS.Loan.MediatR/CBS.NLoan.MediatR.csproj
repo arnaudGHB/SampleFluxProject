@@ -1,0 +1,58 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="CollateralMediaR - Copy\**" />
+    <EmbeddedResource Remove="CollateralMediaR - Copy\**" />
+    <None Remove="CollateralMediaR - Copy\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="RefundMediaR\Handlers\AddRefundCommandHandler.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="FluentValidation" Version="11.8.0" />
+    <PackageReference Include="Hangfire.Core" Version="1.8.11" />
+    <PackageReference Include="MediatR" Version="12.1.1" />
+    <PackageReference Include="NPOI" Version="2.7.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.13" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CBS.Loan.Data\CBS.NLoan.Data.csproj" />
+    <ProjectReference Include="..\CBS.Loan.Helper\CBS.NLoan.Helper.csproj" />
+    <ProjectReference Include="..\CBS.Loan.Repository\CBS.NLoan.Repository.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="CommiteeMediaR\LoanCommeteeMemberMediaR\Validations\" />
+    <Folder Include="CommiteeMediaR\LoanCommiteeValidationMediaR\Validations\" />
+    <Folder Include="CommiteeMediaR\LoanCommiteeGroupMediaR\Validations\" />
+    <Folder Include="DocumentMediaR\DocumentPackP\Validations\" />
+    <Folder Include="DocumentMediaR\DocumentP\Validations\" />
+    <Folder Include="LoanProductCollateral\Validations\" />
+    <Folder Include="LoanProductRepaymentCycle\Validations\" />
+    <Folder Include="LoanProductRepaymentOrder\Validations\" />
+    <Folder Include="LoanProductMediaR\Validations\" />
+    <Folder Include="CustomerLoanAccountMediaR\Validations\" />
+    <Folder Include="CollateralMediaR\Validations\" />
+    <Folder Include="LoanCollateralMediaR\Validations\" />
+    <Folder Include="LoanGuarantorMediaR\Validations\" />
+    <Folder Include="LoanCalculator\" />
+    <Folder Include="TaxMediaR\Validations\" />
+    <Folder Include="TempMediaR\Commands\" />
+    <Folder Include="TempMediaR\Handlers\" />
+    <Folder Include="TempMediaR\Queries\" />
+    <Folder Include="TempMediaR\Validations\" />
+    <Folder Include="RefundMediaR\Validations\" />
+  </ItemGroup>
+
+</Project>

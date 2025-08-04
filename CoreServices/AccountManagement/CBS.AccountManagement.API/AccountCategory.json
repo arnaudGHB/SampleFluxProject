@@ -1,0 +1,42 @@
+[
+  {
+    "id": "03debc9f-9eb9-44dc-a450-2ea0a6dbfece",
+    "name": "Equity",
+    "description": "Residual interest in assets after deducting all liabilities representing the net worth and ownership capital"
+  },
+  {
+    "id": "1cf458ce-f7e9-4cc1-8d64-4f88eb3acc1c",
+    "name": "Expense",
+    "description": "Outflows or decreases of economic benefits or depletions of assets from delivery of goods or services"
+  },
+  {
+    "id": "670e88ed-21d8-40e3-a824-4efa4312e971",
+    "name": "Liability",
+    "description": "Financial obligations that reflects money owed to creditors and need to be repaid in the future"
+  },
+  {
+    "id": "6d11f7e5-ba6e-4b6a-a6bf-e2fa386b9f7d",
+    "name": "Off-Balance-Sheet",
+    "description": "Off-balance sheet accounts, which include commitments, guarantees, and contingencies."
+  },
+  {
+    "id": "9e771660-0081-4dd9-9fac-86a5f295e127",
+    "name": "Asset",
+    "description": "Assets or resources with economic value that an individual, corporation or country owns or controls with the expectation that it will provide future benefit"
+  },
+  {
+    "id": "a4927b10-70f4-4949-9f5d-8f8a04ea9273",
+    "name": "Extra-Ordinary",
+    "description": "Not described"
+  },
+  {
+    "id": "d64e307d-456b-4592-aa47-110e315bcae5",
+    "name": "Assets Or Liabilities",
+    "description": "Operations with Customer"
+  },
+  {
+    "id": "eb62e8b6-162b-4820-a73a-18082dca05af",
+    "name": "Revenue",
+    "description": " Increases in economic benefits generated from delivery of goods or services before expenses are deducted"
+  }
+]

@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Entity\Bank\**" />
+    <Compile Remove="Entity\Branch\**" />
+    <Compile Remove="Entity\Organization\**" />
+    <EmbeddedResource Remove="Entity\Bank\**" />
+    <EmbeddedResource Remove="Entity\Branch\**" />
+    <EmbeddedResource Remove="Entity\Organization\**" />
+    <None Remove="Entity\Bank\**" />
+    <None Remove="Entity\Branch\**" />
+    <None Remove="Entity\Organization\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EPPlus" Version="7.0.5" />
+    <PackageReference Include="Microsoft.Web.Administration" Version="11.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Dto\TransactionDto\" />
+    <Folder Include="Entity\Openi\" />
+  </ItemGroup>
+
+</Project>

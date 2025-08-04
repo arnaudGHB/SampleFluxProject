@@ -1,0 +1,34 @@
+﻿using Microsoft.EntityFrameworkCore.Migrations;
+
+#nullable disable
+
+namespace CBS.CUSTOMER.DOMAIN.Migrations
+{
+    /// <inheritdoc />
+    public partial class M17 : Migration
+    {
+       
+
+
+        protected override void Up(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.AlterColumn<string>(
+                 name: "AgeCategoryStatus",
+                 table: "Customers",
+                 type: "nvarchar(max)",
+                 nullable: false,
+                 defaultValue: "");
+        }
+
+        /// <inheritdoc />
+        protected override void Down(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.AlterColumn<string>(
+                 name: "AgeCategoryStatus",
+                 table: "Customers",
+                 type: "nvarchar(max)",
+                 nullable: true,
+                 defaultValue: "");
+        }
+    }
+}

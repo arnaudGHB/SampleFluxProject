@@ -1,0 +1,17 @@
+﻿using CBS.TransactionManagement.Dto;
+using CBS.TransactionManagement.Helper;
+using MediatR;
+
+namespace CBS.TransactionManagement.MediatR.SubTellerProvissioningP.Commands
+{
+    /// <summary>
+    /// Represents a command to update a Teller.
+    /// </summary>
+    public class OpenningOfDaySubTellerCommand : IRequest<ServiceResponse<SubTellerProvioningHistoryDto>>
+    {
+        public decimal InitialAmount { get; set; }
+        public CurrencyNotesRequest CurrencyNotes { get; set; }
+
+    }
+
+}
