@@ -13,8 +13,4 @@
 
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\CoreServices\TransactionManagement\CBS.TransactionManagement.Domain\CBS.TransactionManagement.Domain.csproj" />
-  </ItemGroup>
-
 </Project>

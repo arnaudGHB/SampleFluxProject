@@ -1,0 +1,95 @@
+version: '3.8'
+
+services:
+  user-skill-management-api:
+    image: ${DOCKER_REGISTRY-}userskillmanagementapi
+    container_name: user-skill-management-api
+    build:
+      context: .
+      dockerfile: CBS.UserSkillManagement.API/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+      - ConnectionStrings__DefaultConnection=Server=mssql;Database=UserSkillManagementDB;User=sa;Password=YourStrong@Passw0rd;TrustServerCertificate=true;
+      - JwtSettings__Secret=YourSuperSecretKeyForJWTTokenGeneration
+      - JwtSettings__Issuer=UserSkillManagement.API
+      - JwtSettings__Audience=UserSkillManagement.Clients
+      - JwtSettings__AccessTokenExpirationMinutes=60
+      - JwtSettings__RefreshTokenExpirationDays=7
+    ports:
+      - "5000:80"
+    depends_on:
+      - mssql
+      - redis
+    networks:
+      - user-skill-network
+
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: mssql
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=YourStrong@Passw0rd
+      - MSSQL_PID=Developer
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssql_data:/var/opt/mssql/data
+    networks:
+      - user-skill-network
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P 'YourStrong@Passw0rd' -Q 'SELECT 1' || exit 1"]
+      interval: 10s
+      retries: 10
+
+  redis:
+    image: redis:alpine
+    container_name: redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - user-skill-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  seq:
+    image: datalust/seq:latest
+    container_name: seq
+    ports:
+      - "5341:80"
+      - "5341:443"
+    environment:
+      - ACCEPT_EULA=Y
+    volumes:
+      - seq_data:/data
+    networks:
+      - user-skill-network
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@cbs.com
+      - PGADMIN_DEFAULT_PASSWORD=admin123
+      - PGADMIN_CONFIG_SERVER_MODE=False
+    ports:
+      - "5050:80"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    networks:
+      - user-skill-network
+
+networks:
+  user-skill-network:
+    driver: bridge
+
+volumes:
+  mssql_data:
+  redis_data:
+  seq_data:
+  pgadmin_data:
