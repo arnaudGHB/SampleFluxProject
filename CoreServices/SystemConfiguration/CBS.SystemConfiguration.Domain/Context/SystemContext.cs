@@ -88,5 +88,3 @@ namespace CBS.SystemConfiguration.Domain
     
     }
 }
-
-

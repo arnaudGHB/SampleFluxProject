@@ -42,6 +42,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\Common\APICallerHelper\CBS.APICaller.Helper\CBS.APICaller.Helper.csproj" />
     <ProjectReference Include="..\..\..\Common\ServiceDiscovery\CBS.ServicesDelivery.Service\CBS.ServicesDelivery.Service.csproj" />
+    <ProjectReference Include="..\..\TransactionManagement\CBS.TransactionManagement.Domain\CBS.TransactionManagement.Domain.csproj" />
     <ProjectReference Include="..\CBS.AccountManagement.Domain\CBS.AccountManagement.Domain.csproj" />
     <ProjectReference Include="..\CBS.AccountManagement.MediatR\CBS.AccountManagement.MediatR.csproj" />
   </ItemGroup>

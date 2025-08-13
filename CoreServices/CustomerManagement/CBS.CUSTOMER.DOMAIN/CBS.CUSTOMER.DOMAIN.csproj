@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\TransactionManagement\CBS.TransactionManagement.Helper\CBS.TransactionManagement.Helper.csproj" />
     <ProjectReference Include="..\CBS.CUSTOMER.DATA\CBS.CUSTOMER.DATA.csproj" />
   </ItemGroup>
 

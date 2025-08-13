@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="FluentValidation" Version="11.8.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.8.0" />
+    <PackageReference Include="MediatR" Version="12.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="7.0.13" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.13" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="5.3.5" />
+    <PackageReference Include="Serilog.AspNetCore" Version="7.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CBS.TransactionManagement.Common\CBS.TransactionManagement.Common.csproj" />
+    <ProjectReference Include="..\CBS.TransactionManagement.Domain\CBS.TransactionManagement.Domain.csproj" />
+    <ProjectReference Include="..\CBS.TransactionManagement.Helper\CBS.TransactionManagement.Helper.csproj" />
+    <ProjectReference Include="..\CBS.TransactionManagement.MediatR\CBS.TransactionManagement.MediatR.csproj" />
+    <ProjectReference Include="..\CBS.TransactionManagement.Repository\CBS.TransactionManagement.Repository.csproj" />
+    <ProjectReference Include="..\Common\APICallerHelper\CBS.APICaller.Helper\CBS.APICaller.Helper.csproj" />
+    <ProjectReference Include="..\Common\TransactionLoggerHelper\CBS.CustomLog.Logger\CBS.CustomLog.Logger.csproj" />
+  </ItemGroup>
+
+</Project>
